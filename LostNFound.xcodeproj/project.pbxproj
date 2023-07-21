@@ -119,13 +119,6 @@
 			path = Roboto;
 			sourceTree = "<group>";
 		};
-		B6035CF12A6A8DCC00BB6319 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		B66D3E3B2A64F87700B01022 = {
 			isa = PBXGroup;
 			children = (
@@ -238,7 +231,6 @@
 		B66D3E612A64FB0E00B01022 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				B6035CF12A6A8DCC00BB6319 /* Components */,
 				B66D3E622A64FB1200B01022 /* Views */,
 			);
 			path = Presenters;
