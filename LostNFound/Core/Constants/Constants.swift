@@ -22,3 +22,16 @@ class Constants {
         
     ]
 }
+class TableNames {
+    init () {}
+    static let foundItemTable = "FoundItem"
+}
+
+class StorageNames {
+    init () {}
+    
+    static let foundItemImageStorage = "ItemFoundImage"
+    static let foundItemImageURL = "https://wdivfbdgewrynyhgxyep.supabase.co/storage/v1/object/public/ItemFoundImage/"
+    
+    
+}
