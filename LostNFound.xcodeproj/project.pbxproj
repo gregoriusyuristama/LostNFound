@@ -119,6 +119,13 @@
 			path = Roboto;
 			sourceTree = "<group>";
 		};
+		B6035CF12A6A8DCC00BB6319 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		B66D3E3B2A64F87700B01022 = {
 			isa = PBXGroup;
 			children = (
@@ -231,7 +238,7 @@
 		B66D3E612A64FB0E00B01022 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				B66D3E632A64FB1800B01022 /* Components */,
+				B6035CF12A6A8DCC00BB6319 /* Components */,
 				B66D3E622A64FB1200B01022 /* Views */,
 			);
 			path = Presenters;
@@ -246,13 +253,6 @@
 				B6035CC12A6A5C9F00BB6319 /* InputItemView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		B66D3E632A64FB1800B01022 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
