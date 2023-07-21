@@ -12,10 +12,10 @@
 		8DCF68CD2A6A3398002980F9 /* DropDownSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF68CC2A6A3398002980F9 /* DropDownSelector.swift */; };
 		8DCF68CF2A6A3D2A002980F9 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF68CE2A6A3D2A002980F9 /* PasswordField.swift */; };
 		8DCF68D12A6A4349002980F9 /* ForgotPassButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF68D02A6A4349002980F9 /* ForgotPassButton.swift */; };
-		8DCF68D72A6A7E4B002980F9 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF68D62A6A7E4B002980F9 /* MainPageView.swift */; };
-		8DCF68D92A6A80EE002980F9 /* MainPageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF68D82A6A80EE002980F9 /* MainPageButton.swift */; };
 		8DCF68D32A6A7AC7002980F9 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF68D22A6A7AC7002980F9 /* ForgotPasswordView.swift */; };
 		8DCF68D52A6A7B4F002980F9 /* EmployeeEmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF68D42A6A7B4F002980F9 /* EmployeeEmailField.swift */; };
+		8DCF68D72A6A7E4B002980F9 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF68D62A6A7E4B002980F9 /* MainPageView.swift */; };
+		8DCF68D92A6A80EE002980F9 /* MainPageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF68D82A6A80EE002980F9 /* MainPageButton.swift */; };
 		B6035CA62A68DF6900BB6319 /* InputFoundItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CA52A68DF6900BB6319 /* InputFoundItemView.swift */; };
 		B6035CA82A68E17F00BB6319 /* InputFoundItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CA72A68E17F00BB6319 /* InputFoundItemViewModel.swift */; };
 		B6035CAA2A68E18D00BB6319 /* ItemFound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CA92A68E18D00BB6319 /* ItemFound.swift */; };
@@ -39,6 +39,7 @@
 		B6035CEC2A6A6AC800BB6319 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6035CE02A6A6AC800BB6319 /* Roboto-Medium.ttf */; };
 		B6035CED2A6A6AC800BB6319 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6035CE12A6A6AC800BB6319 /* Roboto-MediumItalic.ttf */; };
 		B6035CEE2A6A6AC800BB6319 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6035CE22A6A6AC800BB6319 /* Roboto-ThinItalic.ttf */; };
+		B6035CFC2A6A9FE600BB6319 /* ReportFoundPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CFB2A6A9FE600BB6319 /* ReportFoundPage.swift */; };
 		B66D3E482A64F87700B01022 /* LostNFoundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D3E472A64F87700B01022 /* LostNFoundApp.swift */; };
 		B66D3E4A2A64F87700B01022 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D3E492A64F87700B01022 /* ContentView.swift */; };
 		B66D3E4C2A64F87800B01022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66D3E4B2A64F87800B01022 /* Assets.xcassets */; };
@@ -53,10 +54,10 @@
 		8DCF68CC2A6A3398002980F9 /* DropDownSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DropDownSelector.swift; path = LostNFound/Features/Presenters/Views/DropDownSelector.swift; sourceTree = SOURCE_ROOT; };
 		8DCF68CE2A6A3D2A002980F9 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PasswordField.swift; path = LostNFound/Features/Presenters/Views/PasswordField.swift; sourceTree = SOURCE_ROOT; };
 		8DCF68D02A6A4349002980F9 /* ForgotPassButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ForgotPassButton.swift; path = LostNFound/Features/Presenters/Views/ForgotPassButton.swift; sourceTree = SOURCE_ROOT; };
-		8DCF68D62A6A7E4B002980F9 /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
-		8DCF68D82A6A80EE002980F9 /* MainPageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainPageButton.swift; path = LostNFound/Features/Presenters/Views/MainPageButton.swift; sourceTree = SOURCE_ROOT; };
 		8DCF68D22A6A7AC7002980F9 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		8DCF68D42A6A7B4F002980F9 /* EmployeeEmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EmployeeEmailField.swift; path = LostNFound/Features/Presenters/Views/EmployeeEmailField.swift; sourceTree = SOURCE_ROOT; };
+		8DCF68D62A6A7E4B002980F9 /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
+		8DCF68D82A6A80EE002980F9 /* MainPageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainPageButton.swift; path = LostNFound/Features/Presenters/Views/MainPageButton.swift; sourceTree = SOURCE_ROOT; };
 		B6035CA52A68DF6900BB6319 /* InputFoundItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFoundItemView.swift; sourceTree = "<group>"; };
 		B6035CA72A68E17F00BB6319 /* InputFoundItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFoundItemViewModel.swift; sourceTree = "<group>"; };
 		B6035CA92A68E18D00BB6319 /* ItemFound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFound.swift; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 		B6035CE02A6A6AC800BB6319 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		B6035CE12A6A6AC800BB6319 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		B6035CE22A6A6AC800BB6319 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		B6035CFB2A6A9FE600BB6319 /* ReportFoundPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportFoundPage.swift; sourceTree = "<group>"; };
 		B66D3E442A64F87700B01022 /* LostNFound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostNFound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66D3E472A64F87700B01022 /* LostNFoundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostNFoundApp.swift; sourceTree = "<group>"; };
 		B66D3E492A64F87700B01022 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -137,11 +139,33 @@
 			path = Roboto;
 			sourceTree = "<group>";
 		};
+		B6035CF92A6A9E2700BB6319 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				8DCF68D42A6A7B4F002980F9 /* EmployeeEmailField.swift */,
+				8DCF68D02A6A4349002980F9 /* ForgotPassButton.swift */,
+				8DCF68C82A6A2330002980F9 /* CapsuleButton.swift */,
+				8DCF68D82A6A80EE002980F9 /* MainPageButton.swift */,
+				8DCF68CE2A6A3D2A002980F9 /* PasswordField.swift */,
+				8DCF68CC2A6A3398002980F9 /* DropDownSelector.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		B6035CFA2A6A9FC500BB6319 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B6035CFB2A6A9FE600BB6319 /* ReportFoundPage.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		B66D3E3B2A64F87700B01022 = {
 			isa = PBXGroup;
 			children = (
 				B66D3E462A64F87700B01022 /* LostNFound */,
 				B66D3E452A64F87700B01022 /* Products */,
+				B6035CF92A6A9E2700BB6319 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -249,6 +273,7 @@
 		B66D3E612A64FB0E00B01022 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				B6035CFA2A6A9FC500BB6319 /* Components */,
 				B66D3E622A64FB1200B01022 /* Views */,
 			);
 			path = Presenters;
@@ -266,19 +291,6 @@
 				8DCF68D62A6A7E4B002980F9 /* MainPageView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		B66D3E632A64FB1800B01022 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				8DCF68C82A6A2330002980F9 /* CapsuleButton.swift */,
-				8DCF68CC2A6A3398002980F9 /* DropDownSelector.swift */,
-				8DCF68CE2A6A3D2A002980F9 /* PasswordField.swift */,
-				8DCF68D82A6A80EE002980F9 /* MainPageButton.swift */,
-				8DCF68D42A6A7B4F002980F9 /* EmployeeEmailField.swift */,
-				8DCF68D02A6A4349002980F9 /* ForgotPassButton.swift */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,9 +402,9 @@
 				8DCF68D72A6A7E4B002980F9 /* MainPageView.swift in Sources */,
 				8DCF68C72A6A2210002980F9 /* LoginPageView.swift in Sources */,
 				8DCF68CF2A6A3D2A002980F9 /* PasswordField.swift in Sources */,
-                
 				B66D3E5B2A64FADF00B01022 /* Constants.swift in Sources */,
 				8DCF68CD2A6A3398002980F9 /* DropDownSelector.swift in Sources */,
+				B6035CFC2A6A9FE600BB6319 /* ReportFoundPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
