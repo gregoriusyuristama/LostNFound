@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DCF68C72A6A2210002980F9 /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF68C62A6A2210002980F9 /* LoginPageView.swift */; };
+		8DCF68C92A6A2330002980F9 /* CapsuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF68C82A6A2330002980F9 /* CapsuleButton.swift */; };
+		8DCF68CD2A6A3398002980F9 /* DropDownSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF68CC2A6A3398002980F9 /* DropDownSelector.swift */; };
+		8DCF68CF2A6A3D2A002980F9 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF68CE2A6A3D2A002980F9 /* PasswordField.swift */; };
+		8DCF68D12A6A4349002980F9 /* ForgotPassButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF68D02A6A4349002980F9 /* ForgotPassButton.swift */; };
 		B6035CA62A68DF6900BB6319 /* InputFoundItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CA52A68DF6900BB6319 /* InputFoundItemView.swift */; };
 		B6035CA82A68E17F00BB6319 /* InputFoundItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CA72A68E17F00BB6319 /* InputFoundItemViewModel.swift */; };
 		B6035CAA2A68E18D00BB6319 /* ItemFound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CA92A68E18D00BB6319 /* ItemFound.swift */; };
@@ -25,6 +30,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8DCF68C62A6A2210002980F9 /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
+		8DCF68C82A6A2330002980F9 /* CapsuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CapsuleButton.swift; path = LostNFound/Features/Presenters/Views/CapsuleButton.swift; sourceTree = SOURCE_ROOT; };
+		8DCF68CC2A6A3398002980F9 /* DropDownSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DropDownSelector.swift; path = LostNFound/Features/Presenters/Views/DropDownSelector.swift; sourceTree = SOURCE_ROOT; };
+		8DCF68CE2A6A3D2A002980F9 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PasswordField.swift; path = LostNFound/Features/Presenters/Views/PasswordField.swift; sourceTree = SOURCE_ROOT; };
+		8DCF68D02A6A4349002980F9 /* ForgotPassButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ForgotPassButton.swift; path = LostNFound/Features/Presenters/Views/ForgotPassButton.swift; sourceTree = SOURCE_ROOT; };
 		B6035CA52A68DF6900BB6319 /* InputFoundItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFoundItemView.swift; sourceTree = "<group>"; };
 		B6035CA72A68E17F00BB6319 /* InputFoundItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFoundItemViewModel.swift; sourceTree = "<group>"; };
 		B6035CA92A68E18D00BB6319 /* ItemFound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFound.swift; sourceTree = "<group>"; };
@@ -174,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				B66D3E492A64F87700B01022 /* ContentView.swift */,
+				8DCF68C62A6A2210002980F9 /* LoginPageView.swift */,
 				B6035CA52A68DF6900BB6319 /* InputFoundItemView.swift */,
 				B6035CB72A691B9900BB6319 /* ShowFoundItemsView.swift */,
 			);
@@ -183,6 +194,10 @@
 		B66D3E632A64FB1800B01022 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				8DCF68C82A6A2330002980F9 /* CapsuleButton.swift */,
+				8DCF68CC2A6A3398002980F9 /* DropDownSelector.swift */,
+				8DCF68CE2A6A3D2A002980F9 /* PasswordField.swift */,
+				8DCF68D02A6A4349002980F9 /* ForgotPassButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -265,6 +280,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B66D3E582A64FACD00B01022 /* Theme.swift in Sources */,
+				8DCF68D12A6A4349002980F9 /* ForgotPassButton.swift in Sources */,
+				8DCF68C92A6A2330002980F9 /* CapsuleButton.swift in Sources */,
 				B6035CAC2A68E65C00BB6319 /* AppConfig.swift in Sources */,
 				B66D3E4A2A64F87700B01022 /* ContentView.swift in Sources */,
 				B6035CAE2A68E76800BB6319 /* SupabaseManager.swift in Sources */,
@@ -274,7 +291,10 @@
 				B6035CBA2A69329900BB6319 /* ImagePicker.swift in Sources */,
 				B6035CB82A691B9900BB6319 /* ShowFoundItemsView.swift in Sources */,
 				B66D3E482A64F87700B01022 /* LostNFoundApp.swift in Sources */,
+				8DCF68C72A6A2210002980F9 /* LoginPageView.swift in Sources */,
+				8DCF68CF2A6A3D2A002980F9 /* PasswordField.swift in Sources */,
 				B66D3E5B2A64FADF00B01022 /* Constants.swift in Sources */,
+				8DCF68CD2A6A3398002980F9 /* DropDownSelector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +468,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
