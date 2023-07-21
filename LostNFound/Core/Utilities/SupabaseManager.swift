@@ -12,10 +12,10 @@ class SupabaseManager {
     private let config: AppConfig
     let client: SupabaseClient
     
-    private let secret = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndkaXZmYmRnZXdyeW55aGd4eWVwIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY4OTU2NTMxOCwiZXhwIjoyMDA1MTQxMzE4fQ.kVcdHedMgzR2Ya4sLslBRtYbecBi2zMGr4kRlC0bTp4"
+
     
     lazy var storage = SupabaseStorageClient(url: "https://wdivfbdgewrynyhgxyep.supabase.co/storage/v1", headers: [
-        "Authorization" : "Bearer \(secret)",
+        "Authorization" : "Bearer \(config.secret)",
         "apiKey" : config.supabaseAPIKey
     ])
     
@@ -34,15 +34,4 @@ class SupabaseManager {
             
         }
     }
-
-//    func storageClient(bucketName: String = StorageNames.foundItemImageStorage) async -> StorageFileApi? {
-//        guard let jwt = try? await client.auth.session.accessToken else { return nil}
-//        return SupabaseStorageClient(
-//            url: "\(config.supabaseEndpoint)/storage/v1",
-//            headers: [
-//                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndkaXZmYmRnZXdyeW55aGd4eWVwIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY4OTU2NTMxOCwiZXhwIjoyMDA1MTQxMzE4fQ.kVcdHedMgzR2Ya4sLslBRtYbecBi2zMGr4kRlC0bTp4",
-//                "apikey": config.supabaseAPIKey,
-//            ]
-//        ).from(id: bucketName)
-//    }
 }

@@ -15,6 +15,7 @@
 		B6035CB12A68E7C600BB6319 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = B6035CB02A68E7C600BB6319 /* Supabase */; };
 		B6035CB82A691B9900BB6319 /* ShowFoundItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CB72A691B9900BB6319 /* ShowFoundItemsView.swift */; };
 		B6035CBA2A69329900BB6319 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CB92A69329900BB6319 /* ImagePicker.swift */; };
+		B6035CBE2A6A35E400BB6319 /* Supabase-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6035CBD2A6A35E400BB6319 /* Supabase-Info.plist */; };
 		B66D3E482A64F87700B01022 /* LostNFoundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D3E472A64F87700B01022 /* LostNFoundApp.swift */; };
 		B66D3E4A2A64F87700B01022 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D3E492A64F87700B01022 /* ContentView.swift */; };
 		B66D3E4C2A64F87800B01022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66D3E4B2A64F87800B01022 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		B6035CAD2A68E76800BB6319 /* SupabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseManager.swift; sourceTree = "<group>"; };
 		B6035CB72A691B9900BB6319 /* ShowFoundItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowFoundItemsView.swift; sourceTree = "<group>"; };
 		B6035CB92A69329900BB6319 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		B6035CBD2A6A35E400BB6319 /* Supabase-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Supabase-Info.plist"; sourceTree = "<group>"; };
 		B66D3E442A64F87700B01022 /* LostNFound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostNFound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66D3E472A64F87700B01022 /* LostNFoundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostNFoundApp.swift; sourceTree = "<group>"; };
 		B66D3E492A64F87700B01022 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			children = (
 				B6035CAD2A68E76800BB6319 /* SupabaseManager.swift */,
 				B6035CB92A69329900BB6319 /* ImagePicker.swift */,
+				B6035CBD2A6A35E400BB6319 /* Supabase-Info.plist */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6035CBE2A6A35E400BB6319 /* Supabase-Info.plist in Resources */,
 				B66D3E4F2A64F87800B01022 /* Preview Assets.xcassets in Resources */,
 				B66D3E4C2A64F87800B01022 /* Assets.xcassets in Resources */,
 			);

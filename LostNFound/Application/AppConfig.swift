@@ -8,8 +8,49 @@
 import Foundation
 
 class AppConfig {
-    let supabaseAPIKey: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndkaXZmYmRnZXdyeW55aGd4eWVwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODk1NjUzMTgsImV4cCI6MjAwNTE0MTMxOH0.Bsxg6HtxHDmJv1nBxWXqr3SmSmxZ0PCQr5_ygHC_BTY"
-    let supabaseEndpoint: String = "https://wdivfbdgewrynyhgxyep.supabase.co"
+    var supabaseAPIKey: String {
+        return getApiKey()
+    }
+    var supabaseEndpoint: String{
+        return getEndPoint()
+    }
+    
+    var secret: String {
+        return getSecret()
+    }
+    
+    private func getSecret() -> String {
+        guard let filePath = Bundle.main.path(forResource: "Supabase-Info", ofType: "plist") else {
+              fatalError("Couldn't find file 'Supabase-Info.plist'.")
+        }
+        let plist = NSDictionary(contentsOfFile: filePath)
+        guard let value = plist?.object(forKey: "SECRET") as? String else {
+            fatalError("Couldn't find key 'SECRET' in 'Supabase-Info.plist'.")
+        }
+        return value
+    }
+    
+    private func getApiKey() -> String {
+        guard let filePath = Bundle.main.path(forResource: "Supabase-Info", ofType: "plist") else {
+            fatalError("Couldn't find file 'Supabase-Info.plist'.")
+        }
+        let plist = NSDictionary(contentsOfFile: filePath)
+        guard let value = plist?.object(forKey: "API_KEY") as? String else {
+            fatalError("Couldn't find key 'API_KEY' in 'Supabase-Info.plist'.")
+        }
+        return value
+    }
+    
+    private func getEndPoint() -> String {
+        guard let filePath = Bundle.main.path(forResource: "Supabase-Info", ofType: "plist") else {
+            fatalError("Couldn't find file 'Supabase-Info.plist'.")
+        }
+        let plist = NSDictionary(contentsOfFile: filePath)
+        guard let value = plist?.object(forKey: "ENDPOINT") as? String else {
+            fatalError("Couldn't find key 'ENDPOINT' in 'Supabase-Info.plist'.")
+        }
+        return value
+    }
 }
 
 enum AppError: Error, LocalizedError {
