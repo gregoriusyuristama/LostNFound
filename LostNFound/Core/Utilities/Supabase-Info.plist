@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndkaXZmYmRnZXdyeW55aGd4eWVwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODk1NjUzMTgsImV4cCI6MjAwNTE0MTMxOH0.Bsxg6HtxHDmJv1nBxWXqr3SmSmxZ0PCQr5_ygHC_BTY</string>
+	<key>ENDPOINT</key>
+	<string>https://wdivfbdgewrynyhgxyep.supabase.co</string>
+	<key>SECRET</key>
+	<string>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndkaXZmYmRnZXdyeW55aGd4eWVwIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY4OTU2NTMxOCwiZXhwIjoyMDA1MTQxMzE4fQ.kVcdHedMgzR2Ya4sLslBRtYbecBi2zMGr4kRlC0bTp4</string>
+</dict>
+</plist>

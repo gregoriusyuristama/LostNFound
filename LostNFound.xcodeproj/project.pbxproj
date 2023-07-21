@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6035CA62A68DF6900BB6319 /* InputFoundItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CA52A68DF6900BB6319 /* InputFoundItemView.swift */; };
+		B6035CA82A68E17F00BB6319 /* InputFoundItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CA72A68E17F00BB6319 /* InputFoundItemViewModel.swift */; };
+		B6035CAA2A68E18D00BB6319 /* ItemFound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CA92A68E18D00BB6319 /* ItemFound.swift */; };
+		B6035CAC2A68E65C00BB6319 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CAB2A68E65C00BB6319 /* AppConfig.swift */; };
+		B6035CAE2A68E76800BB6319 /* SupabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CAD2A68E76800BB6319 /* SupabaseManager.swift */; };
+		B6035CB12A68E7C600BB6319 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = B6035CB02A68E7C600BB6319 /* Supabase */; };
+		B6035CB82A691B9900BB6319 /* ShowFoundItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CB72A691B9900BB6319 /* ShowFoundItemsView.swift */; };
+		B6035CBA2A69329900BB6319 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CB92A69329900BB6319 /* ImagePicker.swift */; };
+		B6035CBE2A6A35E400BB6319 /* Supabase-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6035CBD2A6A35E400BB6319 /* Supabase-Info.plist */; };
 		B66D3E482A64F87700B01022 /* LostNFoundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D3E472A64F87700B01022 /* LostNFoundApp.swift */; };
 		B66D3E4A2A64F87700B01022 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D3E492A64F87700B01022 /* ContentView.swift */; };
 		B66D3E4C2A64F87800B01022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66D3E4B2A64F87800B01022 /* Assets.xcassets */; };
@@ -16,6 +25,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B6035CA52A68DF6900BB6319 /* InputFoundItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFoundItemView.swift; sourceTree = "<group>"; };
+		B6035CA72A68E17F00BB6319 /* InputFoundItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFoundItemViewModel.swift; sourceTree = "<group>"; };
+		B6035CA92A68E18D00BB6319 /* ItemFound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFound.swift; sourceTree = "<group>"; };
+		B6035CAB2A68E65C00BB6319 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		B6035CAD2A68E76800BB6319 /* SupabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseManager.swift; sourceTree = "<group>"; };
+		B6035CB72A691B9900BB6319 /* ShowFoundItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowFoundItemsView.swift; sourceTree = "<group>"; };
+		B6035CB92A69329900BB6319 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		B6035CBD2A6A35E400BB6319 /* Supabase-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Supabase-Info.plist"; sourceTree = "<group>"; };
 		B66D3E442A64F87700B01022 /* LostNFound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostNFound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66D3E472A64F87700B01022 /* LostNFoundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostNFoundApp.swift; sourceTree = "<group>"; };
 		B66D3E492A64F87700B01022 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -30,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6035CB12A68E7C600BB6319 /* Supabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				B66D3E472A64F87700B01022 /* LostNFoundApp.swift */,
+				B6035CAB2A68E65C00BB6319 /* AppConfig.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -109,6 +128,9 @@
 		B66D3E5D2A64FAF200B01022 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B6035CAD2A68E76800BB6319 /* SupabaseManager.swift */,
+				B6035CB92A69329900BB6319 /* ImagePicker.swift */,
+				B6035CBD2A6A35E400BB6319 /* Supabase-Info.plist */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -126,6 +148,7 @@
 		B66D3E5F2A64FB0300B01022 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B6035CA92A68E18D00BB6319 /* ItemFound.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -133,6 +156,7 @@
 		B66D3E602A64FB0900B01022 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B6035CA72A68E17F00BB6319 /* InputFoundItemViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -150,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				B66D3E492A64F87700B01022 /* ContentView.swift */,
+				B6035CA52A68DF6900BB6319 /* InputFoundItemView.swift */,
+				B6035CB72A691B9900BB6319 /* ShowFoundItemsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,6 +203,9 @@
 			dependencies = (
 			);
 			name = LostNFound;
+			packageProductDependencies = (
+				B6035CB02A68E7C600BB6319 /* Supabase */,
+			);
 			productName = LostNFound;
 			productReference = B66D3E442A64F87700B01022 /* LostNFound.app */;
 			productType = "com.apple.product-type.application";
@@ -205,6 +234,9 @@
 				Base,
 			);
 			mainGroup = B66D3E3B2A64F87700B01022;
+			packageReferences = (
+				B6035CAF2A68E7C600BB6319 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = B66D3E452A64F87700B01022 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -219,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6035CBE2A6A35E400BB6319 /* Supabase-Info.plist in Resources */,
 				B66D3E4F2A64F87800B01022 /* Preview Assets.xcassets in Resources */,
 				B66D3E4C2A64F87800B01022 /* Assets.xcassets in Resources */,
 			);
@@ -232,7 +265,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B66D3E582A64FACD00B01022 /* Theme.swift in Sources */,
+				B6035CAC2A68E65C00BB6319 /* AppConfig.swift in Sources */,
 				B66D3E4A2A64F87700B01022 /* ContentView.swift in Sources */,
+				B6035CAE2A68E76800BB6319 /* SupabaseManager.swift in Sources */,
+				B6035CAA2A68E18D00BB6319 /* ItemFound.swift in Sources */,
+				B6035CA62A68DF6900BB6319 /* InputFoundItemView.swift in Sources */,
+				B6035CA82A68E17F00BB6319 /* InputFoundItemViewModel.swift in Sources */,
+				B6035CBA2A69329900BB6319 /* ImagePicker.swift in Sources */,
+				B6035CB82A691B9900BB6319 /* ShowFoundItemsView.swift in Sources */,
 				B66D3E482A64F87700B01022 /* LostNFoundApp.swift in Sources */,
 				B66D3E5B2A64FADF00B01022 /* Constants.swift in Sources */,
 			);
@@ -366,11 +406,14 @@
 				DEVELOPMENT_TEAM = U43A7X58YW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "In order to take picture of found items, we need your permission to use camera";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "In order to use picture of taken picture found items, we need your permission to give us photo library access";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -398,11 +441,14 @@
 				DEVELOPMENT_TEAM = U43A7X58YW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "In order to take picture of found items, we need your permission to use camera";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "In order to use picture of taken picture found items, we need your permission to give us photo library access";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -441,6 +487,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B6035CAF2A68E7C600BB6319 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B6035CB02A68E7C600BB6319 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6035CAF2A68E7C600BB6319 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B66D3E3C2A64F87700B01022 /* Project object */;
 }
