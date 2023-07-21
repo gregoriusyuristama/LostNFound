@@ -55,9 +55,6 @@ extension ItemFound {
                 throw AppError.clientErrorWithDescription("Last Modified Error")
             }
             
-            guard let imageURL = URL(string: image!) else {
-                throw AppError.clientErrorWithDescription("Error fetching Image URL")
-            }
             
             return ItemFound(id: id, locationFound: location_found, currentLocation: current_location, dateFound: dateFound, desc: desc, lastModified: last_modified, personInCharge: person_in_charge)
         }

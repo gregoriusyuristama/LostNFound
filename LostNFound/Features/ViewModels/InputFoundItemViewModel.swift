@@ -38,8 +38,6 @@ class InputFoundItemViewModel: ObservableObject {
             catch {
                 print(error.localizedDescription)
             }
-            
-            
         }
     }
     
@@ -47,7 +45,7 @@ class InputFoundItemViewModel: ObservableObject {
         Task {
             do{
                 let file = File(name: item.id!.uuidString, data: imageData, fileName: "\(item.id!.uuidString).jpg", contentType: "image/jpeg")
-                try await supabase.storage.from(id: StorageNames.foundItemImageStorage).upload(path: "\(item.id!.uuidString).jpg", file: file, fileOptions: FileOptions(cacheControl: "3600"))
+               let _ = try await supabase.storage.from(id: StorageNames.foundItemImageStorage).upload(path: "\(item.id!.uuidString).jpg", file: file, fileOptions: FileOptions(cacheControl: "3600"))
             } catch {
                 print(error)
             }
