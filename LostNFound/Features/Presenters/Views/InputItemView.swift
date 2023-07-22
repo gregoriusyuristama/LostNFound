@@ -15,43 +15,47 @@ struct InputItemView: View {
     }
     
     @State private var selectedTab: Tab = .found
-
+    
     
     var body: some View {
-        NavigationStack {
             GeometryReader { geo in
-                VStack(alignment: .center) {
-                    Text("Report Page")
-                        .font(.custom("HelveticaNeue", size: 36))
-                        .fontWeight(.bold)
-                    Picker("", selection: $selectedTab) {
-                        Text("Lost").tag(Tab.lost)
-                        Text("Found").tag(Tab.found)
-                    }
-                    .pickerStyle(.segmented)
-                    
-                    if selectedTab == Tab.lost {
+                ScrollView {
+                    VStack(alignment: .center) {
+                        Text("Report Page")
+                            .font(.custom("HelveticaNeue", size: 36))
+                            .fontWeight(.bold)
+                            .padding(.top)
+                        Picker("", selection: $selectedTab) {
+                            Text("Lost").tag(Tab.lost)
+                            Text("Found").tag(Tab.found)
+                        }
+                        .pickerStyle(.segmented)
                         
-                    } else {
-                        ReportFoundPage(geo: geo)
+                        if selectedTab == Tab.lost {
+                            ReportLostPage()
+                        } else {
+                            ReportFoundPage(geo: geo)
+                        }
+                        Spacer()
+                        Button {
+                            
+                        } label: {
+                            Text("Submit")
+                                .font(.custom(AppFonts.robotoMedium, size: 30))
+                                .foregroundColor(.white)
+                        }
+                        .frame(width: UIScreen.main.bounds.width * 0.2, height: UIScreen.main.bounds.height * 0.07)
+                        .background(Color(.systemGreen))
+                        .cornerRadius(36)
+                        .padding()
+                        .shadow(radius: 4, y: 4)
                     }
-                    Spacer()
-                    Button {
-                        
-                    } label: {
-                        Text("Submit")
-                            .font(.custom(AppFonts.robotoMedium, size: 30))
-                            .foregroundColor(.white)
-                    }
-                    .frame(width: geo.size.width * 0.2, height: geo.size.height * 0.07)
-                    .background(Color(.systemGreen))
-                    .cornerRadius(36)
-                    .padding()
-                    
+                    .toolbarBackground(AppColor.blueNavigationBar, for: .navigationBar)
+                    .toolbarBackground(.visible, for: .navigationBar)
                 }
+                .frame(maxWidth: geo.size.width, maxHeight: geo.size.height)
+                
             }
-            
-        }
     }
 }
 

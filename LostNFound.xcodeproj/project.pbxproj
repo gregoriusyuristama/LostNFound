@@ -40,11 +40,15 @@
 		B6035CED2A6A6AC800BB6319 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6035CE12A6A6AC800BB6319 /* Roboto-MediumItalic.ttf */; };
 		B6035CEE2A6A6AC800BB6319 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6035CE22A6A6AC800BB6319 /* Roboto-ThinItalic.ttf */; };
 		B6035CFC2A6A9FE600BB6319 /* ReportFoundPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CFB2A6A9FE600BB6319 /* ReportFoundPage.swift */; };
+		B6035CFE2A6ABE1300BB6319 /* ReportLostPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CFD2A6ABE1300BB6319 /* ReportLostPage.swift */; };
+		B64DCA152A6C05C20067D333 /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64DCA142A6C05C20067D333 /* AppFonts.swift */; };
+		B64DCA172A6C05D30067D333 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64DCA162A6C05D30067D333 /* AppColor.swift */; };
+		B64DCA192A6C0A8D0067D333 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64DCA182A6C0A8D0067D333 /* CustomDatePicker.swift */; };
+		B64DCA1B2A6C161F0067D333 /* CustomDropDownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64DCA1A2A6C161F0067D333 /* CustomDropDownMenu.swift */; };
 		B66D3E482A64F87700B01022 /* LostNFoundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D3E472A64F87700B01022 /* LostNFoundApp.swift */; };
 		B66D3E4A2A64F87700B01022 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D3E492A64F87700B01022 /* ContentView.swift */; };
 		B66D3E4C2A64F87800B01022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66D3E4B2A64F87800B01022 /* Assets.xcassets */; };
 		B66D3E4F2A64F87800B01022 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66D3E4E2A64F87800B01022 /* Preview Assets.xcassets */; };
-		B66D3E582A64FACD00B01022 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D3E572A64FACD00B01022 /* Theme.swift */; };
 		B66D3E5B2A64FADF00B01022 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D3E5A2A64FADF00B01022 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,12 +86,16 @@
 		B6035CE12A6A6AC800BB6319 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		B6035CE22A6A6AC800BB6319 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
 		B6035CFB2A6A9FE600BB6319 /* ReportFoundPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportFoundPage.swift; sourceTree = "<group>"; };
+		B6035CFD2A6ABE1300BB6319 /* ReportLostPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportLostPage.swift; sourceTree = "<group>"; };
+		B64DCA142A6C05C20067D333 /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
+		B64DCA162A6C05D30067D333 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		B64DCA182A6C0A8D0067D333 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
+		B64DCA1A2A6C161F0067D333 /* CustomDropDownMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropDownMenu.swift; sourceTree = "<group>"; };
 		B66D3E442A64F87700B01022 /* LostNFound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostNFound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66D3E472A64F87700B01022 /* LostNFoundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostNFoundApp.swift; sourceTree = "<group>"; };
 		B66D3E492A64F87700B01022 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B66D3E4B2A64F87800B01022 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B66D3E4E2A64F87800B01022 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B66D3E572A64FACD00B01022 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B66D3E5A2A64FADF00B01022 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,8 +157,20 @@
 				8DCF68D82A6A80EE002980F9 /* MainPageButton.swift */,
 				8DCF68CE2A6A3D2A002980F9 /* PasswordField.swift */,
 				8DCF68CC2A6A3398002980F9 /* DropDownSelector.swift */,
+				B6035CFD2A6ABE1300BB6319 /* ReportLostPage.swift */,
+				B64DCA182A6C0A8D0067D333 /* CustomDatePicker.swift */,
+				B64DCA1A2A6C161F0067D333 /* CustomDropDownMenu.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		B64DCA132A6C05B50067D333 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				B64DCA142A6C05C20067D333 /* AppFonts.swift */,
+				B64DCA162A6C05D30067D333 /* AppColor.swift */,
+			);
+			path = Themes;
 			sourceTree = "<group>";
 		};
 		B66D3E3B2A64F87700B01022 = {
@@ -204,7 +224,7 @@
 				B66D3E5D2A64FAF200B01022 /* Utilities */,
 				B66D3E5C2A64FAE700B01022 /* Resources */,
 				B66D3E592A64FAD200B01022 /* Constants */,
-				B66D3E572A64FACD00B01022 /* Theme.swift */,
+				B64DCA132A6C05B50067D333 /* Themes */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -375,8 +395,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B66D3E582A64FACD00B01022 /* Theme.swift in Sources */,
+				B64DCA192A6C0A8D0067D333 /* CustomDatePicker.swift in Sources */,
+				B6035CFE2A6ABE1300BB6319 /* ReportLostPage.swift in Sources */,
 				8DCF68D52A6A7B4F002980F9 /* EmployeeEmailField.swift in Sources */,
+				B64DCA152A6C05C20067D333 /* AppFonts.swift in Sources */,
 				8DCF68D12A6A4349002980F9 /* ForgotPassButton.swift in Sources */,
 				8DCF68C92A6A2330002980F9 /* CapsuleButton.swift in Sources */,
 				8DCF68D32A6A7AC7002980F9 /* ForgotPasswordView.swift in Sources */,
@@ -388,9 +410,11 @@
 				B6035CA82A68E17F00BB6319 /* InputFoundItemViewModel.swift in Sources */,
 				8DCF68D92A6A80EE002980F9 /* MainPageButton.swift in Sources */,
 				B6035CBA2A69329900BB6319 /* ImagePicker.swift in Sources */,
+				B64DCA1B2A6C161F0067D333 /* CustomDropDownMenu.swift in Sources */,
 				B6035CB82A691B9900BB6319 /* ShowFoundItemsView.swift in Sources */,
 				B66D3E482A64F87700B01022 /* LostNFoundApp.swift in Sources */,
 				B6035CC22A6A5C9F00BB6319 /* InputItemView.swift in Sources */,
+				B64DCA172A6C05D30067D333 /* AppColor.swift in Sources */,
 				8DCF68D72A6A7E4B002980F9 /* MainPageView.swift in Sources */,
 				8DCF68C72A6A2210002980F9 /* LoginPageView.swift in Sources */,
 				8DCF68CF2A6A3D2A002980F9 /* PasswordField.swift in Sources */,
