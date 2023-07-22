@@ -61,11 +61,17 @@ class Constants {
         "Valuable - Keys",
         "Valuable - Wallets and Personal Identification",
         "Valuable - Documents",
+        "Non-valueable - Books and Stationary",
+        "Non-valueable - Make-up/Cosmetics",
+        "Non-valueable - Clothing",
+        "Perishable - Food",
+        "Perishable - Drinks",
     ]
 }
 class TableNames {
     init () {}
     static let foundItemTable = "FoundItem"
+    static let lostItemTable = "LostItem"
 }
 
 class StorageNames {
@@ -91,8 +97,15 @@ class ItemCategory {
             "Wallets and Personal Identification",
             "Documents"
         ],
-        "Non-Valueable": ["Books and Stationary", "Make-up/Cosmetics", "Clothing"],
-        "Perishable" : ["Food", "Drinks"],
+        "Non-Valueable": [
+            "Books and Stationary",
+            "Make-up/Cosmetics",
+            "Clothing"
+        ],
+        "Perishable" : [
+            "Food",
+            "Drinks"
+        ],
     ]
     
 }

@@ -13,6 +13,6 @@ class AppColor {
     
     static let blueLogin = Color("BlueLogin")
     static let greenLogin = Color("GreenLogin")
-    static let grayEmptyImage = Color("GrayEmptyImage")
+    static let defaultGray = Color("DefaultGray")
     static let blueNavigationBar = Color("BlueNavigationBar")
 }

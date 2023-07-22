@@ -7,8 +7,9 @@
 
 import Foundation
 
-struct ItemFound: Hashable, Identifiable, Codable {
+struct ItemLnF: Hashable, Identifiable, Codable {
     var id: UUID? = UUID()
+    let itemName: String?
     let locationFound: String?
     let currentLocation: String?
     let dateFound: Date?
@@ -20,22 +21,24 @@ struct ItemFound: Hashable, Identifiable, Codable {
     let desc: String?
     let lastModified: Date?
     let personInCharge: String?
+    let phoneNumber: String?
     
     
-    func toDTO() throws -> ItemFound.DTO{
+    func toDTO() throws -> ItemLnF.DTO{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
         
         let dateFoundString = dateFormatter.string(from: dateFound!)
         let lastModifiedString = dateFormatter.string(from: lastModified!)
         
-        return ItemFound.DTO(id: id, location_found: locationFound, current_location: currentLocation, date_found: dateFoundString, image: imageURL.absoluteString, desc: desc, last_modified: lastModifiedString, person_in_charge: personInCharge)
+        return ItemLnF.DTO(id: id, item_name: itemName, location_found: locationFound, current_location: currentLocation, date_found: dateFoundString, image: imageURL.absoluteString, desc: desc, last_modified: lastModifiedString, person_in_charge: personInCharge, phone_number: phoneNumber)
     }
 }
 
-extension ItemFound {
+extension ItemLnF {
     struct DTO: Codable {
         let id: UUID?
+        let item_name: String?
         let location_found: String?
         let current_location: String?
         let date_found: String?
@@ -43,8 +46,9 @@ extension ItemFound {
         let desc: String?
         let last_modified: String?
         let person_in_charge: String?
+        let phone_number: String?
         
-        func toDomain() throws -> ItemFound {
+        func toDomain() throws -> ItemLnF {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
             guard let dateFound = dateFormatter.date(from: date_found!) else {
@@ -56,7 +60,7 @@ extension ItemFound {
             }
             
             
-            return ItemFound(id: id, locationFound: location_found, currentLocation: current_location, dateFound: dateFound, desc: desc, lastModified: last_modified, personInCharge: person_in_charge)
+            return ItemLnF(id: id, itemName: item_name, locationFound: location_found, currentLocation: current_location, dateFound: dateFound, desc: desc, lastModified: last_modified, personInCharge: person_in_charge, phoneNumber: phone_number)
         }
     }
 }

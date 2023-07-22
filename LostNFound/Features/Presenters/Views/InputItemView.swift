@@ -32,23 +32,11 @@ struct InputItemView: View {
                         .pickerStyle(.segmented)
                         
                         if selectedTab == Tab.lost {
-                            ReportLostPage()
+                            ReportLostPage(geo: geo)
                         } else {
                             ReportFoundPage(geo: geo)
                         }
-                        Spacer()
-                        Button {
-                            
-                        } label: {
-                            Text("Submit")
-                                .font(.custom(AppFonts.robotoMedium, size: 30))
-                                .foregroundColor(.white)
-                        }
-                        .frame(width: UIScreen.main.bounds.width * 0.2, height: UIScreen.main.bounds.height * 0.07)
-                        .background(Color(.systemGreen))
-                        .cornerRadius(36)
-                        .padding()
-                        .shadow(radius: 4, y: 4)
+
                     }
                     .toolbarBackground(AppColor.blueNavigationBar, for: .navigationBar)
                     .toolbarBackground(.visible, for: .navigationBar)

@@ -18,7 +18,7 @@
 		8DCF68D92A6A80EE002980F9 /* MainPageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF68D82A6A80EE002980F9 /* MainPageButton.swift */; };
 		B6035CA62A68DF6900BB6319 /* InputFoundItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CA52A68DF6900BB6319 /* InputFoundItemView.swift */; };
 		B6035CA82A68E17F00BB6319 /* InputFoundItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CA72A68E17F00BB6319 /* InputFoundItemViewModel.swift */; };
-		B6035CAA2A68E18D00BB6319 /* ItemFound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CA92A68E18D00BB6319 /* ItemFound.swift */; };
+		B6035CAA2A68E18D00BB6319 /* ItemLnF.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CA92A68E18D00BB6319 /* ItemLnF.swift */; };
 		B6035CAC2A68E65C00BB6319 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CAB2A68E65C00BB6319 /* AppConfig.swift */; };
 		B6035CAE2A68E76800BB6319 /* SupabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CAD2A68E76800BB6319 /* SupabaseManager.swift */; };
 		B6035CB12A68E7C600BB6319 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = B6035CB02A68E7C600BB6319 /* Supabase */; };
@@ -45,6 +45,8 @@
 		B64DCA172A6C05D30067D333 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64DCA162A6C05D30067D333 /* AppColor.swift */; };
 		B64DCA192A6C0A8D0067D333 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64DCA182A6C0A8D0067D333 /* CustomDatePicker.swift */; };
 		B64DCA1B2A6C161F0067D333 /* CustomDropDownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64DCA1A2A6C161F0067D333 /* CustomDropDownMenu.swift */; };
+		B64DCA1E2A6C2B0C0067D333 /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64DCA1D2A6C2B0C0067D333 /* SubmitButton.swift */; };
+		B64DCA202A6C333B0067D333 /* InputLostItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64DCA1F2A6C333B0067D333 /* InputLostItemViewModel.swift */; };
 		B66D3E482A64F87700B01022 /* LostNFoundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D3E472A64F87700B01022 /* LostNFoundApp.swift */; };
 		B66D3E4A2A64F87700B01022 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D3E492A64F87700B01022 /* ContentView.swift */; };
 		B66D3E4C2A64F87800B01022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66D3E4B2A64F87800B01022 /* Assets.xcassets */; };
@@ -64,7 +66,7 @@
 		8DCF68D82A6A80EE002980F9 /* MainPageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainPageButton.swift; path = LostNFound/Features/Presenters/Components/MainPageButton.swift; sourceTree = SOURCE_ROOT; };
 		B6035CA52A68DF6900BB6319 /* InputFoundItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFoundItemView.swift; sourceTree = "<group>"; };
 		B6035CA72A68E17F00BB6319 /* InputFoundItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFoundItemViewModel.swift; sourceTree = "<group>"; };
-		B6035CA92A68E18D00BB6319 /* ItemFound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFound.swift; sourceTree = "<group>"; };
+		B6035CA92A68E18D00BB6319 /* ItemLnF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemLnF.swift; sourceTree = "<group>"; };
 		B6035CAB2A68E65C00BB6319 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		B6035CAD2A68E76800BB6319 /* SupabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseManager.swift; sourceTree = "<group>"; };
 		B6035CB72A691B9900BB6319 /* ShowFoundItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowFoundItemsView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,8 @@
 		B64DCA162A6C05D30067D333 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		B64DCA182A6C0A8D0067D333 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		B64DCA1A2A6C161F0067D333 /* CustomDropDownMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropDownMenu.swift; sourceTree = "<group>"; };
+		B64DCA1D2A6C2B0C0067D333 /* SubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
+		B64DCA1F2A6C333B0067D333 /* InputLostItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputLostItemViewModel.swift; sourceTree = "<group>"; };
 		B66D3E442A64F87700B01022 /* LostNFound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostNFound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66D3E472A64F87700B01022 /* LostNFoundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostNFoundApp.swift; sourceTree = "<group>"; };
 		B66D3E492A64F87700B01022 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -150,7 +154,6 @@
 		B6035CFA2A6A9FC500BB6319 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				B6035CFB2A6A9FE600BB6319 /* ReportFoundPage.swift */,
 				8DCF68D42A6A7B4F002980F9 /* EmployeeEmailField.swift */,
 				8DCF68D02A6A4349002980F9 /* ForgotPassButton.swift */,
 				8DCF68C82A6A2330002980F9 /* CapsuleButton.swift */,
@@ -158,8 +161,10 @@
 				8DCF68CE2A6A3D2A002980F9 /* PasswordField.swift */,
 				8DCF68CC2A6A3398002980F9 /* DropDownSelector.swift */,
 				B6035CFD2A6ABE1300BB6319 /* ReportLostPage.swift */,
+				B6035CFB2A6A9FE600BB6319 /* ReportFoundPage.swift */,
 				B64DCA182A6C0A8D0067D333 /* CustomDatePicker.swift */,
 				B64DCA1A2A6C161F0067D333 /* CustomDropDownMenu.swift */,
+				B64DCA1D2A6C2B0C0067D333 /* SubmitButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -269,7 +274,7 @@
 		B66D3E5F2A64FB0300B01022 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B6035CA92A68E18D00BB6319 /* ItemFound.swift */,
+				B6035CA92A68E18D00BB6319 /* ItemLnF.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				B6035CA72A68E17F00BB6319 /* InputFoundItemViewModel.swift */,
+				B64DCA1F2A6C333B0067D333 /* InputLostItemViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -403,9 +409,10 @@
 				8DCF68C92A6A2330002980F9 /* CapsuleButton.swift in Sources */,
 				8DCF68D32A6A7AC7002980F9 /* ForgotPasswordView.swift in Sources */,
 				B6035CAC2A68E65C00BB6319 /* AppConfig.swift in Sources */,
+				B64DCA202A6C333B0067D333 /* InputLostItemViewModel.swift in Sources */,
 				B66D3E4A2A64F87700B01022 /* ContentView.swift in Sources */,
 				B6035CAE2A68E76800BB6319 /* SupabaseManager.swift in Sources */,
-				B6035CAA2A68E18D00BB6319 /* ItemFound.swift in Sources */,
+				B6035CAA2A68E18D00BB6319 /* ItemLnF.swift in Sources */,
 				B6035CA62A68DF6900BB6319 /* InputFoundItemView.swift in Sources */,
 				B6035CA82A68E17F00BB6319 /* InputFoundItemViewModel.swift in Sources */,
 				8DCF68D92A6A80EE002980F9 /* MainPageButton.swift in Sources */,
@@ -414,6 +421,7 @@
 				B6035CB82A691B9900BB6319 /* ShowFoundItemsView.swift in Sources */,
 				B66D3E482A64F87700B01022 /* LostNFoundApp.swift in Sources */,
 				B6035CC22A6A5C9F00BB6319 /* InputItemView.swift in Sources */,
+				B64DCA1E2A6C2B0C0067D333 /* SubmitButton.swift in Sources */,
 				B64DCA172A6C05D30067D333 /* AppColor.swift in Sources */,
 				8DCF68D72A6A7E4B002980F9 /* MainPageView.swift in Sources */,
 				8DCF68C72A6A2210002980F9 /* LoginPageView.swift in Sources */,

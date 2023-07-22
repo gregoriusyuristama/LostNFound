@@ -65,7 +65,7 @@ struct InputFoundItemView: View {
                     ImagePicker(uiImage: $selectedImage, isPresenting: $showImagePicker, sourceType: $sourceType)
                 }
                 Button {
-                    let newItem = ItemFound(locationFound: self.locationFound, currentLocation: self.currentLocation, dateFound: self.dateFound, desc: self.itemDesc, lastModified: Date(), personInCharge: self.personInCharge)
+                    let newItem = ItemLnF(itemName: "", locationFound: self.locationFound, currentLocation: self.currentLocation, dateFound: self.dateFound, desc: self.itemDesc, lastModified: Date(), personInCharge: self.personInCharge, phoneNumber: "")
                     vm.addItem(item: newItem, imageData: (selectedImage?.jpegData(compressionQuality: 0.5))!) { status, error in
                         if let error = error {
                             print(error.localizedDescription)

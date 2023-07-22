@@ -1,17 +1,16 @@
 //
-//  InputFoundItemViewModel.swift
+//  InputLostItemViewModel.swift
 //  LostNFound
 //
-//  Created by Gregorius Yuristama Nugraha on 7/20/23.
+//  Created by Gregorius Yuristama Nugraha on 7/22/23.
 //
 
 import Foundation
 import SupabaseStorage
 
-class InputFoundItemViewModel: ObservableObject {
+class InputLostItemViewModel: ObservableObject {
     @Published var allItems: [ItemLnF] = [ItemLnF]()
     @Published var isLoading: Bool = false
-    
     
     private let supabase = SupabaseManager()
     
@@ -24,7 +23,7 @@ class InputFoundItemViewModel: ObservableObject {
                     self.isLoading = true
                 }
                 let allItemFoundsDTO: [ItemLnF.DTO] = try await supabase.client.database
-                    .from(TableNames.foundItemTable)
+                    .from(TableNames.lostItemTable)
                     .select()
                     .execute()
                     .value
@@ -33,7 +32,6 @@ class InputFoundItemViewModel: ObservableObject {
                     self.allItems = allItemFounds
                     self.isLoading = false
                 }
-                
             }
             catch {
                 print(error.localizedDescription)
@@ -61,7 +59,7 @@ class InputFoundItemViewModel: ObservableObject {
                     self.isLoading = true
                 }
                 try await supabase.client.database
-                    .from(TableNames.foundItemTable)
+                    .from(TableNames.lostItemTable)
                     .insert(values: itemDTO, returning: .representation)
                     .single()
                     .execute()
