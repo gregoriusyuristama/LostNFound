@@ -21,7 +21,6 @@ struct ShowFoundItemsView: View {
             ZStack {
                 ProgressView()
                     .opacity(vm.isLoading ? 1 : 0)
-                
                 List{
                     ForEach(vm.allItems) { data in
                         VStack {

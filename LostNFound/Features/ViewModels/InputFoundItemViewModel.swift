@@ -9,7 +9,7 @@ import Foundation
 import SupabaseStorage
 
 class InputFoundItemViewModel: ObservableObject {
-    @Published var allItems: [ItemFound] = [ItemFound]()
+    @Published var allItems: [ItemLnF] = [ItemLnF]()
     @Published var isLoading: Bool = false
     
     
@@ -23,7 +23,7 @@ class InputFoundItemViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     self.isLoading = true
                 }
-                let allItemFoundsDTO: [ItemFound.DTO] = try await supabase.client.database
+                let allItemFoundsDTO: [ItemLnF.DTO] = try await supabase.client.database
                     .from(TableNames.foundItemTable)
                     .select()
                     .execute()
@@ -38,16 +38,14 @@ class InputFoundItemViewModel: ObservableObject {
             catch {
                 print(error.localizedDescription)
             }
-            
-            
         }
     }
     
-    private func uploadImage(item: ItemFound, imageData: Data){
+    private func uploadImage(item: ItemLnF, imageData: Data){
         Task {
             do{
                 let file = File(name: item.id!.uuidString, data: imageData, fileName: "\(item.id!.uuidString).jpg", contentType: "image/jpeg")
-                try await supabase.storage.from(id: StorageNames.foundItemImageStorage).upload(path: "\(item.id!.uuidString).jpg", file: file, fileOptions: FileOptions(cacheControl: "3600"))
+               let _ = try await supabase.storage.from(id: StorageNames.foundItemImageStorage).upload(path: "\(item.id!.uuidString).jpg", file: file, fileOptions: FileOptions(cacheControl: "3600"))
             } catch {
                 print(error)
             }
@@ -55,7 +53,7 @@ class InputFoundItemViewModel: ObservableObject {
         }
     }
     
-    func addItem(item: ItemFound, imageData: Data, completion: @escaping (_ status: Bool, _ error: Error?) -> Void) {
+    func addItem(item: ItemLnF, imageData: Data, completion: @escaping (_ status: Bool, _ error: Error?) -> Void) {
         do {
             let itemDTO = try item.toDTO()
             Task {
