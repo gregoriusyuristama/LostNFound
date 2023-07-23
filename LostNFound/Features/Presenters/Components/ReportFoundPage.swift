@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Vision
 
 struct ReportFoundPage: View {
     let geo: GeometryProxy
@@ -16,7 +17,7 @@ struct ReportFoundPage: View {
     @State private var category: String?
     @State private var desc: String = ""
     @FocusState private var isTextEditorFocused: Bool
-    @State var sourceType: UIImagePickerController.SourceType = .camera
+    @State var sourceType: UIImagePickerController.SourceType = .photoLibrary
     @State private var selectedImage: UIImage?
     @State private var errorMessage: String = ""
     @State private var reportNumber: String = ""
@@ -26,6 +27,8 @@ struct ReportFoundPage: View {
     @State private var showImagePicker = false
     
     @StateObject private var vm = InputFoundItemViewModel()
+    
+    @State private var translatedColorName: String = ""
     
     var body: some View {
         VStack {
@@ -54,8 +57,16 @@ struct ReportFoundPage: View {
                             .padding(.horizontal, 70)
                     }
                 }
-                .sheet(isPresented: $showImagePicker){
+                .sheet(isPresented: $showImagePicker) {
                     ImagePicker(uiImage: $selectedImage, isPresenting: $showImagePicker, sourceType: $sourceType)
+                }.onChange(of: selectedImage) { newImage in
+                    if let image = newImage {
+                        getResult(selectedImage: image)
+                        let uicolor = image.preciseAverageColor()
+                        let itemColor = uicolor!.accessibilityName
+                        translatedColorName = translateColorToIndonesian(itemColor)
+                        itemName.append(" " + translatedColorName)
+                    }
                 }
                 VStack{
                     Group {
@@ -199,6 +210,53 @@ struct ReportFoundPage: View {
             return false
         }
         return true
+    }
+    
+    private func getResult(selectedImage: UIImage){
+        let classifyImage = ImageClassifier()
+        let ciImage = CIImage(image: selectedImage)!
+        classifyImage.processImage(for: ciImage)
+        
+        let classificationResult = classifyImage.result
+        itemName = classificationResult
+    }
+}
+
+
+class ImageClassifier: ObservableObject{
+    var shared = createImageClassifier ()
+    @Published var result : String = ""
+    
+    static func createImageClassifier () -> VNCoreMLModel{
+        let defaultConfig = MLModelConfiguration ()
+        
+        let imageClassifierWrapper = try? LostAndFoundClassifier (configuration: defaultConfig)
+        
+        guard let imageClassifier = imageClassifierWrapper else{
+            fatalError ("Failed to create an ML Model instance")
+        }
+        let imageClassifierModel = imageClassifier.model
+        guard let imageClassifierVisionModel = try? VNCoreMLModel (for: imageClassifierModel) else{
+            fatalError ("Failed to create VNCoreMLModel Instance")
+        }
+        return imageClassifierVisionModel
+    }
+    
+    func processImage (for image : CIImage) {
+        let imageClassificationRequest = VNCoreMLRequest(model: shared)
+        let handler = VNImageRequestHandler(ciImage: image, orientation: .up)
+        let requests : [VNRequest] = [imageClassificationRequest]
+        try? handler.perform(requests)
+        guard let observations = imageClassificationRequest.results as?
+            [VNClassificationObservation] else{
+            print("VNRequest produced the wrong result type :",(type(of:
+                imageClassificationRequest.results)))
+            return
+        }
+        if let firstResult = observations.first{
+            self.result = firstResult.identifier
+            print(self.result)
+        }
     }
 }
 
