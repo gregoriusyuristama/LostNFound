@@ -17,7 +17,7 @@ struct ReportFoundPage: View {
     @State private var category: String?
     @State private var desc: String = ""
     @FocusState private var isTextEditorFocused: Bool
-    @State var sourceType: UIImagePickerController.SourceType = .photoLibrary
+    @State var sourceType: UIImagePickerController.SourceType = .camera
     @State private var selectedImage: UIImage?
     @State private var errorMessage: String = ""
     @State private var reportNumber: String = ""

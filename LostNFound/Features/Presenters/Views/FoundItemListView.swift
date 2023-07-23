@@ -1,5 +1,5 @@
 //
-//  LostItemListView.swift
+//  FoundItemListView.swift
 //  LostNFound
 //
 //  Created by Gregorius Yuristama Nugraha on 7/23/23.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct LostItemListView: View {
-    @StateObject var vm = InputLostItemViewModel()
+struct FoundItemListView: View {
+    @StateObject var vm = InputFoundItemViewModel()
     @State var searchText = ""
-    @State var selectedItem: ItemLost?
+    @State var selectedItem: ItemFound?
     var body: some View {
         ZStack {
             ProgressView()
@@ -18,7 +18,7 @@ struct LostItemListView: View {
             NavigationSplitView {
                 VStack {
                     HStack {
-                        Text("Lost Item")
+                        Text("Found Item")
                             .font(.system(size: 34))
                             .bold()
                         Spacer()
@@ -26,6 +26,7 @@ struct LostItemListView: View {
                     .padding(.leading, 16)
                     NativeSearchBar(text: $searchText)
                     ScrollView {
+                        
                         ForEach(vm.allItems) { item in
                             Button {
                                 selectedItem = item
@@ -52,7 +53,7 @@ struct LostItemListView: View {
                                             let end = uuidString.index(uuidString.endIndex, offsetBy: 0)
                                             let range = start..<end
                                             let newId = uuidString[range]
-                                            Text("Lost #\(newId.description)")
+                                            Text("Found #\(newId.description)")
                                                 .font(.custom(AppFonts.helveticaNeue, size: 24))
                                                 .fontWeight(.medium)
                                                 .foregroundColor(selectedItem?.id == item.id ? Color.white : Color.black)
@@ -93,13 +94,12 @@ struct LostItemListView: View {
                         }
                         .background(Color.white)
                     }
-                    
                     Spacer()
                 }
                 .toolbar(.hidden, for: .navigationBar)
             } detail: {
                 if let _ = selectedItem {
-                    LostItemView(item: $selectedItem)
+                    FoundItemView(item: $selectedItem)
                 }else {
                     Text("Please select an item")
                 }
@@ -114,8 +114,8 @@ struct LostItemListView: View {
     }
 }
 
-struct LostItemListView_Previews: PreviewProvider {
+struct FoundItemListView_Previews: PreviewProvider {
     static var previews: some View {
-        LostItemListView()
+        FoundItemListView()
     }
 }
