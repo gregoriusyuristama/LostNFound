@@ -30,7 +30,7 @@ struct LostItemNonImageView: View {
         VStack{
             //            BlueTitle()
             HStack{
-                ItemImage(imageName: "NoImage").padding(48)
+                ItemImage().padding(48)
                 VStack{
                     HStack(alignment: .top){
                         VStack(alignment: .leading, spacing: 17){
@@ -91,7 +91,8 @@ struct LostItemNonImageView: View {
                     .padding(.trailing, 20)
             }
             ScrollView(.vertical){
-                LazyVGrid(columns: gridItems) {                ForEach(imageDescriptions.filter { isWordInSentence($0.description, itemDesc) }, id: \.self) { imageDescription in
+                LazyVGrid(columns: gridItems) {
+                    ForEach(imageDescriptions.filter { isWordInSentence($0.description, itemDesc) }, id: \.self) { imageDescription in
                     VStack{
                         Image(imageDescription.imageName)
                             .resizable()
