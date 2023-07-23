@@ -11,13 +11,22 @@ struct BlueTitle: View {
     @State var title = "Lost#88"
 
     var body: some View {
-        Text(title)
-            .padding(50)
-            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height*0.15, alignment: .leading)
-            .font(.system(size: 50))
-            .bold()
-            .foregroundColor(.white)
-            .background(Color("BlueTitle"))
+        GeometryReader { geo in
+            ZStack {
+                Rectangle()
+                    .fill(Color("BlueTitle"))
+                Text(title)
+                    .padding(17)
+//                    .frame(width: geo.size.width, height: geo.size.height*0.1)
+                    .font(.custom(AppFonts.helveticaNeue, size: 30))
+                    .bold()
+                    .foregroundColor(.white)
+//                    .background()
+//                Spacer()
+            }
+            
+        }
+       
 
     }
 }
