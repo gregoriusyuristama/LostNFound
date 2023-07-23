@@ -9,6 +9,19 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>LostNFoundMRTJ.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>B66D3E432A64F87700B01022</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>

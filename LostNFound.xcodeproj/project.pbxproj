@@ -128,7 +128,7 @@
 		B64DCA282A6CF43B0067D333 /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
 		B64DCA2A2A6CF6CD0067D333 /* DateToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToString.swift; sourceTree = "<group>"; };
 		B64DCA2C2A6CFF440067D333 /* ItemLost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemLost.swift; sourceTree = "<group>"; };
-		B66D3E442A64F87700B01022 /* LostNFound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostNFound.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B66D3E442A64F87700B01022 /* LostNFoundMRTJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostNFoundMRTJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66D3E472A64F87700B01022 /* LostNFoundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostNFoundApp.swift; sourceTree = "<group>"; };
 		B66D3E492A64F87700B01022 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B66D3E4B2A64F87800B01022 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -238,7 +238,7 @@
 		B66D3E452A64F87700B01022 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B66D3E442A64F87700B01022 /* LostNFound.app */,
+				B66D3E442A64F87700B01022 /* LostNFoundMRTJ.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -376,9 +376,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B66D3E432A64F87700B01022 /* LostNFound */ = {
+		B66D3E432A64F87700B01022 /* LostNFoundMRTJ */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B66D3E522A64F87800B01022 /* Build configuration list for PBXNativeTarget "LostNFound" */;
+			buildConfigurationList = B66D3E522A64F87800B01022 /* Build configuration list for PBXNativeTarget "LostNFoundMRTJ" */;
 			buildPhases = (
 				B66D3E402A64F87700B01022 /* Sources */,
 				B66D3E412A64F87700B01022 /* Frameworks */,
@@ -388,12 +388,12 @@
 			);
 			dependencies = (
 			);
-			name = LostNFound;
+			name = LostNFoundMRTJ;
 			packageProductDependencies = (
 				B6035CB02A68E7C600BB6319 /* Supabase */,
 			);
 			productName = LostNFound;
-			productReference = B66D3E442A64F87700B01022 /* LostNFound.app */;
+			productReference = B66D3E442A64F87700B01022 /* LostNFoundMRTJ.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -427,7 +427,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B66D3E432A64F87700B01022 /* LostNFound */,
+				B66D3E432A64F87700B01022 /* LostNFoundMRTJ */,
 			);
 		};
 /* End PBXProject section */
@@ -641,6 +641,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LostNFound/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LostAndFoundMRTJ;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSCameraUsageDescription = "In order to take picture of found items, we need your permission to use camera";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "In order to use picture of taken picture found items, we need your permission to give us photo library access";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -655,7 +657,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ada.lostnfound.nc3group4.LostNFound;
+				PRODUCT_BUNDLE_IDENTIFIER = nc3group4.LostNFound;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -678,6 +680,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LostNFound/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LostAndFoundMRTJ;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSCameraUsageDescription = "In order to take picture of found items, we need your permission to use camera";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "In order to use picture of taken picture found items, we need your permission to give us photo library access";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -692,7 +696,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ada.lostnfound.nc3group4.LostNFound;
+				PRODUCT_BUNDLE_IDENTIFIER = nc3group4.LostNFound;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -715,7 +719,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B66D3E522A64F87800B01022 /* Build configuration list for PBXNativeTarget "LostNFound" */ = {
+		B66D3E522A64F87800B01022 /* Build configuration list for PBXNativeTarget "LostNFoundMRTJ" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B66D3E532A64F87800B01022 /* Debug */,
