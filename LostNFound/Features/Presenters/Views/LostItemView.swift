@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct LostItemView: View {
-    //    let rankedImageSet = findRankedImageSet(targetImage: UIImage(named: "DompetLost")!, imagesSet: [UIImage(named: "DompetFound1")!, UIImage(named: "DompetFound2")!, UIImage(named: "DompetFound3")!, UIImage(named: "DompetFound4")!, UIImage(named: "DompetFound5")!, UIImage(named: "DompetFound6")!, UIImage(named: "DompetFound7")!])
     
     @Binding var item: ItemLost?
     
@@ -93,8 +92,7 @@ struct LostItemView: View {
                             imageFetchGroup.enter()
                             URLSession.shared.dataTask(with: url) { imageData, _, _ in
                                 if let imageData = imageData, let image = UIImage(data: imageData) {
-                                    vm.findRankedImageSet(targetImage: image, imagesSet: vm.allFoundImages)
-                                    self.rankedImagesView = vm.rankedImages
+                                    self.rankedImagesView = vm.findRankedImageSet(targetImage: image, imagesSet: vm.allFoundImages)
                                     self.isProcessing = false
 //                                    print(vm.rankedImages)
                                     
@@ -167,15 +165,6 @@ struct LostItemView: View {
     }
 }
 
-//func findRankedImageSet(targetImage: UIImage, imagesSet: [UIImage]) -> [(UIImage, Double)] {
-//    // Calculate the similarity for each item in the imagesSet and sort them by similarity
-//    let rankedImageSet = imagesSet.map { image -> (UIImage, Double) in
-//        let similarity = calculateMSE(targetImage, image) // You can also use calculateSSIM if needed
-//        return (image, similarity)
-//    }.sorted(by: { $0.1 < $1.1 })
-//
-//    return rankedImageSet
-//}
 
 struct LostItemView_Previews: PreviewProvider {
     static var previews: some View {

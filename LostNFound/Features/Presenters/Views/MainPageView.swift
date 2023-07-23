@@ -51,7 +51,7 @@ struct MainPageView: View {
                 
                 //Found Items Button
                 NavigationLink{
-                    ShowFoundItemsView()
+                    FoundItemListView()
                 }label: {
                     MainPageButton(buttonName: "found_items")
                 }

@@ -68,6 +68,8 @@
 		B66D3E4F2A64F87800B01022 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66D3E4E2A64F87800B01022 /* Preview Assets.xcassets */; };
 		B66D3E5B2A64FADF00B01022 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D3E5A2A64FADF00B01022 /* Constants.swift */; };
 		B685B1C22A6D36DD0043815E /* LostItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685B1C12A6D36DD0043815E /* LostItemViewModel.swift */; };
+		B685B1C42A6D842E0043815E /* FoundItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685B1C32A6D842E0043815E /* FoundItemListView.swift */; };
+		B685B1C62A6D845C0043815E /* FoundItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685B1C52A6D845C0043815E /* FoundItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +135,8 @@
 		B66D3E4E2A64F87800B01022 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B66D3E5A2A64FADF00B01022 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B685B1C12A6D36DD0043815E /* LostItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostItemViewModel.swift; sourceTree = "<group>"; };
+		B685B1C32A6D842E0043815E /* FoundItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundItemListView.swift; sourceTree = "<group>"; };
+		B685B1C52A6D845C0043815E /* FoundItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,6 +367,8 @@
 				9F89C9B32A6C23FA00CF57A4 /* LostItemNonImageView.swift */,
 				B64DCA212A6C97770067D333 /* LostItemListView.swift */,
 				9F89C9AB2A6BADC600CF57A4 /* LostItemView.swift */,
+				B685B1C32A6D842E0043815E /* FoundItemListView.swift */,
+				B685B1C52A6D845C0043815E /* FoundItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -466,12 +472,14 @@
 				8DCF68D12A6A4349002980F9 /* ForgotPassButton.swift in Sources */,
 				9F89C9AC2A6BADC600CF57A4 /* LostItemView.swift in Sources */,
 				8DCF68C92A6A2330002980F9 /* CapsuleButton.swift in Sources */,
+				B685B1C42A6D842E0043815E /* FoundItemListView.swift in Sources */,
 				8DCF68D32A6A7AC7002980F9 /* ForgotPasswordView.swift in Sources */,
 				B64DCA292A6CF43B0067D333 /* ImageClassifier.swift in Sources */,
 				B6035CAC2A68E65C00BB6319 /* AppConfig.swift in Sources */,
 				B64DCA202A6C333B0067D333 /* InputLostItemViewModel.swift in Sources */,
 				B66D3E4A2A64F87700B01022 /* ContentView.swift in Sources */,
 				B6035CAE2A68E76800BB6319 /* SupabaseManager.swift in Sources */,
+				B685B1C62A6D845C0043815E /* FoundItemView.swift in Sources */,
 				B6035CAA2A68E18D00BB6319 /* ItemFound.swift in Sources */,
 				9F89C9A82A6BA85300CF57A4 /* BlueTitle.swift in Sources */,
 				B6035CA62A68DF6900BB6319 /* InputFoundItemView.swift in Sources */,

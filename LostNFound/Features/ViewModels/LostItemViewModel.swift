@@ -72,10 +72,10 @@ class LostItemViewModel: ObservableObject {
 //        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
 //    }
     
-    func findRankedImageSet(targetImage: UIImage, imagesSet: [UIImage]) {
+    func findRankedImageSet(targetImage: UIImage, imagesSet: [UIImage]) -> [(UIImage, Double)]{
         // Calculate the similarity for each item in the imagesSet and sort them by similarity
 //        self.isLoading = true
-        self.rankedImages = imagesSet.map { image -> (UIImage, Double) in
+        return imagesSet.map { image -> (UIImage, Double) in
             print("cekRankedImages")
             print("Target Image : \(targetImage)")
             print(image)
