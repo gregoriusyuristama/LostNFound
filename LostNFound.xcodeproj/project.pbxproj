@@ -23,6 +23,8 @@
 		9F89C9B02A6BD41200CF57A4 /* ImageSimilarity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F89C9AF2A6BD41200CF57A4 /* ImageSimilarity.swift */; };
 		9F89C9B22A6C234400CF57A4 /* StringMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F89C9B12A6C234400CF57A4 /* StringMatching.swift */; };
 		9F89C9B42A6C23FA00CF57A4 /* LostItemNonImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F89C9B32A6C23FA00CF57A4 /* LostItemNonImageView.swift */; };
+		9F89C9BA2A6CCDC700CF57A4 /* ColorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F89C9B92A6CCDC700CF57A4 /* ColorTracker.swift */; };
+		9F89C9BC2A6CCDFB00CF57A4 /* LostAndFoundClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9F89C9BB2A6CCDFB00CF57A4 /* LostAndFoundClassifier.mlmodel */; };
 		B6035CA62A68DF6900BB6319 /* InputFoundItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CA52A68DF6900BB6319 /* InputFoundItemView.swift */; };
 		B6035CA82A68E17F00BB6319 /* InputFoundItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CA72A68E17F00BB6319 /* InputFoundItemViewModel.swift */; };
 		B6035CAA2A68E18D00BB6319 /* ItemLnF.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6035CA92A68E18D00BB6319 /* ItemLnF.swift */; };
@@ -78,6 +80,8 @@
 		9F89C9AF2A6BD41200CF57A4 /* ImageSimilarity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSimilarity.swift; sourceTree = "<group>"; };
 		9F89C9B12A6C234400CF57A4 /* StringMatching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringMatching.swift; sourceTree = "<group>"; };
 		9F89C9B32A6C23FA00CF57A4 /* LostItemNonImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostItemNonImageView.swift; sourceTree = "<group>"; };
+		9F89C9B92A6CCDC700CF57A4 /* ColorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTracker.swift; sourceTree = "<group>"; };
+		9F89C9BB2A6CCDFB00CF57A4 /* LostAndFoundClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = LostAndFoundClassifier.mlmodel; sourceTree = "<group>"; };
 		B6035CA52A68DF6900BB6319 /* InputFoundItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFoundItemView.swift; sourceTree = "<group>"; };
 		B6035CA72A68E17F00BB6319 /* InputFoundItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFoundItemViewModel.swift; sourceTree = "<group>"; };
 		B6035CA92A68E18D00BB6319 /* ItemLnF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemLnF.swift; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 				B64DCA182A6C0A8D0067D333 /* CustomDatePicker.swift */,
 				B64DCA1A2A6C161F0067D333 /* CustomDropDownMenu.swift */,
 				B64DCA1D2A6C2B0C0067D333 /* SubmitButton.swift */,
+				9F89C9B92A6CCDC700CF57A4 /* ColorTracker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 				9F89C9B12A6C234400CF57A4 /* StringMatching.swift */,
 				B6035CAD2A68E76800BB6319 /* SupabaseManager.swift */,
 				B6035CB92A69329900BB6319 /* ImagePicker.swift */,
+				9F89C9BB2A6CCDFB00CF57A4 /* LostAndFoundClassifier.mlmodel */,
 				B6035CBD2A6A35E400BB6319 /* Supabase-Info.plist */,
 			);
 			path = Utilities;
@@ -438,6 +444,7 @@
 				B6035CAA2A68E18D00BB6319 /* ItemLnF.swift in Sources */,
 				9F89C9A82A6BA85300CF57A4 /* BlueTitle.swift in Sources */,
 				B6035CA62A68DF6900BB6319 /* InputFoundItemView.swift in Sources */,
+				9F89C9BC2A6CCDFB00CF57A4 /* LostAndFoundClassifier.mlmodel in Sources */,
 				9F89C9B22A6C234400CF57A4 /* StringMatching.swift in Sources */,
 				B6035CA82A68E17F00BB6319 /* InputFoundItemViewModel.swift in Sources */,
 				8DCF68D92A6A80EE002980F9 /* MainPageButton.swift in Sources */,
@@ -450,6 +457,7 @@
 				B64DCA172A6C05D30067D333 /* AppColor.swift in Sources */,
 				9F89C9AE2A6BAE6700CF57A4 /* ItemImage.swift in Sources */,
 				B6035CB82A691B9900BB6319 /* ShowFoundItemsView.swift in Sources */,
+				9F89C9BA2A6CCDC700CF57A4 /* ColorTracker.swift in Sources */,
 				B66D3E482A64F87700B01022 /* LostNFoundApp.swift in Sources */,
 				9F89C9B42A6C23FA00CF57A4 /* LostItemNonImageView.swift in Sources */,
 				8DCF68D72A6A7E4B002980F9 /* MainPageView.swift in Sources */,
@@ -587,7 +595,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LostNFound/Preview Content\"";
-				DEVELOPMENT_TEAM = U43A7X58YW;
+				DEVELOPMENT_TEAM = PVB7U9FX9T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LostNFound/Info.plist;
