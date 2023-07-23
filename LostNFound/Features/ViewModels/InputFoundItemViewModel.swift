@@ -12,7 +12,6 @@ class InputFoundItemViewModel: ObservableObject {
     @Published var allItems: [ItemFound] = [ItemFound]()
     @Published var isLoading: Bool = false
     
-    
     private let supabase = SupabaseManager()
     
     init() {}
@@ -53,7 +52,7 @@ class InputFoundItemViewModel: ObservableObject {
         }
     }
     
-    func addItem(item: ItemFound, imageData: Data, completion: @escaping (_ status: Bool, _ error: Error?) -> Void) {
+    func addItem(item: ItemFound, imageData: Data?, completion: @escaping (_ status: Bool, _ error: Error?) -> Void) {
         do {
             let itemDTO = try item.toDTO()
             Task {
@@ -66,7 +65,9 @@ class InputFoundItemViewModel: ObservableObject {
                     .single()
                     .execute()
                     .value
-                uploadImage(item: item, imageData: imageData)
+                if let imgData = imageData {
+                    uploadImage(item: item, imageData: imgData)
+                }
                 DispatchQueue.main.async {
                     self.isLoading = false
                 }

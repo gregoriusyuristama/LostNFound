@@ -65,14 +65,26 @@ struct InputFoundItemView: View {
                 }
                 Button {
                     let newItem = ItemFound(itemName: "", locationFound: self.locationFound, currentLocation: self.currentLocation, dateFound: self.dateFound, desc: self.itemDesc, lastModified: Date(), personInCharge: self.personInCharge, phoneNumber: "")
-                    vm.addItem(item: newItem, imageData: (selectedImage?.jpegData(compressionQuality: 0.5))!) { status, error in
-                        if let error = error {
-                            print(error.localizedDescription)
-                            return
-                        } else {
-                            resetForm()
+                    if let imgData = selectedImage?.jpegData(compressionQuality: 0.5){
+                        vm.addItem(item: newItem, imageData: imgData) { status, error in
+                            if let error = error {
+                                print(error.localizedDescription)
+                                return
+                            } else {
+                                resetForm()
+                            }
+                        }
+                    } else {
+                        vm.addItem(item: newItem, imageData: nil) { status, error in
+                            if let error = error {
+                                print(error.localizedDescription)
+                                return
+                            } else {
+                                resetForm()
+                            }
                         }
                     }
+                    
                 } label: {
                     Text("Submit")
                 }
