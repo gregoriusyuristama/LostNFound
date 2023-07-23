@@ -25,7 +25,7 @@ struct ContentView: View {
 //            }
 //            .padding()
 //        }
-        LostItemListView()
+        MainPageView()
     }
 }
 

@@ -78,16 +78,15 @@ class StorageNames {
     init () {}
     
     static let foundItemImageStorage = "ItemFoundImage"
+    static let lostItemImageStorage = "ItemLostImage"
     static let foundItemImageURL = "https://wdivfbdgewrynyhgxyep.supabase.co/storage/v1/object/public/ItemFoundImage/"
+    static let lostItemImageURL = "https://wdivfbdgewrynyhgxyep.supabase.co/storage/v1/object/public/ItemLostImage/"
 }
 
 
 
 class ItemCategory {
     init() {}
-    
-    
-    
     static let category = [
         "Valueable": [
             "Cash",

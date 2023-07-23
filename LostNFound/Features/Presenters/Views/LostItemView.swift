@@ -27,6 +27,7 @@ struct LostItemView: View {
                             .padding(.leading, 30)
                     }
                     .frame(height: UIScreen.main.bounds.height * 0.157)
+                    Spacer()
                     HStack {
                         VStack(alignment: .leading){
                             Text("Item Description")
@@ -99,8 +100,7 @@ struct LostItemView: View {
                     .foregroundColor(.white)
                     .font(.custom(AppFonts.helveticaNeue, size: 50))
                     .bold()
-                    .padding(.top, 17)
-                    .padding(.leading, 17)
+                    .padding(.bottom, 28)
             }
         })
         .toolbarBackground(AppColor.blueNavigationBar, for: .navigationBar)

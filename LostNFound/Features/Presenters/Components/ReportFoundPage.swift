@@ -61,7 +61,7 @@ struct ReportFoundPage: View {
                     ImagePicker(uiImage: $selectedImage, isPresenting: $showImagePicker, sourceType: $sourceType)
                 }.onChange(of: selectedImage) { newImage in
                     if let image = newImage {
-                        getResult(selectedImage: image)
+                        itemName = ImageClassifier.getResult(selectedImage: image)
                         let uicolor = image.preciseAverageColor()
                         let itemColor = uicolor!.accessibilityName
                         translatedColorName = translateColorToIndonesian(itemColor)
@@ -111,7 +111,7 @@ struct ReportFoundPage: View {
             SubmitButton(doSubmit: {
                 if checkForm() {
                     isShowingSubmitSheet = true
-                    let newItem = ItemLnF(itemName: self.itemName, locationFound: self.location, currentLocation: self.location, dateFound: self.date, desc: self.desc, lastModified: Date(), personInCharge: "Icho", phoneNumber: self.phoneNumber)
+                    let newItem = ItemFound(itemName: self.itemName, locationFound: self.location, currentLocation: self.location, dateFound: self.date, desc: self.desc, lastModified: Date(), personInCharge: "Icho", phoneNumber: self.phoneNumber)
                     reportNumber = newItem.id?.uuidString ?? "000"
                     vm.addItem(item: newItem, imageData: (self.selectedImage?.jpegData(compressionQuality: 0.5))!) { status, error in
                         if let error = error {
@@ -121,10 +121,8 @@ struct ReportFoundPage: View {
                         }
                     }
                 } else {
-                    
-                        isShowingErrorSheet = true
+                    isShowingErrorSheet = true
                 }
-                
             }
             )
             .sheet(isPresented: $isShowingSubmitSheet){
@@ -212,53 +210,11 @@ struct ReportFoundPage: View {
         return true
     }
     
-    private func getResult(selectedImage: UIImage){
-        let classifyImage = ImageClassifier()
-        let ciImage = CIImage(image: selectedImage)!
-        classifyImage.processImage(for: ciImage)
-        
-        let classificationResult = classifyImage.result
-        itemName = classificationResult
-    }
+    
 }
 
 
-class ImageClassifier: ObservableObject{
-    var shared = createImageClassifier ()
-    @Published var result : String = ""
-    
-    static func createImageClassifier () -> VNCoreMLModel{
-        let defaultConfig = MLModelConfiguration ()
-        
-        let imageClassifierWrapper = try? LostAndFoundClassifier (configuration: defaultConfig)
-        
-        guard let imageClassifier = imageClassifierWrapper else{
-            fatalError ("Failed to create an ML Model instance")
-        }
-        let imageClassifierModel = imageClassifier.model
-        guard let imageClassifierVisionModel = try? VNCoreMLModel (for: imageClassifierModel) else{
-            fatalError ("Failed to create VNCoreMLModel Instance")
-        }
-        return imageClassifierVisionModel
-    }
-    
-    func processImage (for image : CIImage) {
-        let imageClassificationRequest = VNCoreMLRequest(model: shared)
-        let handler = VNImageRequestHandler(ciImage: image, orientation: .up)
-        let requests : [VNRequest] = [imageClassificationRequest]
-        try? handler.perform(requests)
-        guard let observations = imageClassificationRequest.results as?
-            [VNClassificationObservation] else{
-            print("VNRequest produced the wrong result type :",(type(of:
-                imageClassificationRequest.results)))
-            return
-        }
-        if let firstResult = observations.first{
-            self.result = firstResult.identifier
-            print(self.result)
-        }
-    }
-}
+
 
 struct ReportFoundPage_Previews: PreviewProvider {
     static var previews: some View {

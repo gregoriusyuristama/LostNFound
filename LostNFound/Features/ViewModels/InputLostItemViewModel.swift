@@ -9,7 +9,7 @@ import Foundation
 import SupabaseStorage
 
 class InputLostItemViewModel: ObservableObject {
-    @Published var allItems: [ItemLnF] = [ItemLnF]()
+    @Published var allItems: [ItemFound] = [ItemFound]()
     @Published var isLoading: Bool = false
     
     private let supabase = SupabaseManager()
@@ -22,7 +22,7 @@ class InputLostItemViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     self.isLoading = true
                 }
-                let allItemFoundsDTO: [ItemLnF.DTO] = try await supabase.client.database
+                let allItemFoundsDTO: [ItemFound.DTO] = try await supabase.client.database
                     .from(TableNames.lostItemTable)
                     .select()
                     .execute()
@@ -39,19 +39,18 @@ class InputLostItemViewModel: ObservableObject {
         }
     }
     
-    private func uploadImage(item: ItemLnF, imageData: Data){
+    private func uploadImage(item: ItemFound, imageData: Data){
         Task {
             do{
                 let file = File(name: item.id!.uuidString, data: imageData, fileName: "\(item.id!.uuidString).jpg", contentType: "image/jpeg")
-               let _ = try await supabase.storage.from(id: StorageNames.foundItemImageStorage).upload(path: "\(item.id!.uuidString).jpg", file: file, fileOptions: FileOptions(cacheControl: "3600"))
+                let _ = try await supabase.storage.from(id: StorageNames.lostItemImageURL).upload(path: "\(item.id!.uuidString).jpg", file: file, fileOptions: FileOptions(cacheControl: "3600"))
             } catch {
                 print(error)
             }
-            
         }
     }
     
-    func addItem(item: ItemLnF, imageData: Data, completion: @escaping (_ status: Bool, _ error: Error?) -> Void) {
+    func addItem(item: ItemFound, imageData: Data, completion: @escaping (_ status: Bool, _ error: Error?) -> Void) {
         do {
             let itemDTO = try item.toDTO()
             Task {

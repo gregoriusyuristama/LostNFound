@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct MainPageView: View {
+    
     var body: some View {
         NavigationStack {
             VStack(spacing: 0){
-                
                 //Top Bar
                 ZStack {
                     Rectangle()
@@ -42,11 +42,9 @@ struct MainPageView: View {
                     } label: {
                         MainPageButton(buttonName: "add_report")
                     }
-                    
-                    
                     //Lost Report Button
-                    Button{
-                        
+                    NavigationLink{
+                        LostItemListView()
                     }label: {
                         MainPageButton(buttonName: "lost_report")
                     }
@@ -65,7 +63,6 @@ struct MainPageView: View {
                 //Help Button
                 HStack{
                     Button{
-                        
                     }label: {
                         Image(systemName: "questionmark.circle")
                             .resizable()
@@ -78,7 +75,6 @@ struct MainPageView: View {
                 
             }
         }
-        .tint(.white)
         
     }
 }
