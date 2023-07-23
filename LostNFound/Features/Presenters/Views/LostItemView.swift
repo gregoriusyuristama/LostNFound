@@ -11,74 +11,105 @@ struct LostItemView: View {
     let rankedImageSet = findRankedImageSet(targetImage: UIImage(named: "DompetLost")!, imagesSet: [UIImage(named: "DompetFound1")!, UIImage(named: "DompetFound2")!, UIImage(named: "DompetFound3")!, UIImage(named: "DompetFound4")!, UIImage(named: "DompetFound5")!, UIImage(named: "DompetFound6")!, UIImage(named: "DompetFound7")!])
     var body: some View {
         VStack{
-            BlueTitle()
             HStack{
-                ItemImage().padding(70)
-                VStack(alignment: .leading){
-                    HStack{
-                        VStack(alignment: .leading){
+                ItemImage().padding(48)
+                VStack {
+                    HStack(alignment: .top) {
+                        VStack(alignment: .leading, spacing: 17) {
                             Text("Dompet Pink")
-                                .font(.system(size: 50))
+                                .font(.custom(AppFonts.helveticaNeue, size: 25))
                                 .bold()
-                            
                             Text("Dompet pink seukuran telapak tangan merk Cath Kidston")
-                                .font(.system(size: 30))
+                                .font(.custom(AppFonts.helveticaNeue, size: 20))
                         }
-                        VStack{
-                            ProcessButton()
-                        }
+                        Spacer()
+                        ProcessButton()
+                            .padding(.leading, 30)
                     }
-                    Text("Item Description")
-                        .font(.system(size: 50))
-                        .bold()
-                    VStack(alignment: .leading){
-                        HStack{
-                            Text("Category")
-                                .font(.system(size: 30))
+                    .frame(height: UIScreen.main.bounds.height * 0.157)
+                    HStack {
+                        VStack(alignment: .leading){
+                            Text("Item Description")
+                                .font(.custom(AppFonts.helveticaNeue, size: 25))
                                 .bold()
-                            Text("Valuable")
-                                .font(.system(size: 30))
+                                .padding(.bottom, 17)
+                            HStack {
+                                Text("Category")
+                                    .bold()
+                                Spacer()
+                                Text("Valuable")
+                            }
+                            Divider()
+                            HStack {
+                                Text("Location")
+                                    .bold()
+                                Spacer()
+                                Text("MRT Dukuh Atas")
+                            }
+                            Divider()
+                            
+                            HStack {
+                                Text("Lost Date")
+                                    .bold()
+                                Spacer()
+                                Text("12 July 2023")
+                            }
                         }
-                        HStack{
-                            Text("Location")
-                                .font(.system(size: 30))
-                                .bold()
-                            Text("MRT Dukuh Atas")
-                                .font(.system(size: 30))
-                        }
-                        HStack{
-                            Text("Lost Date")
-                                .font(.system(size: 30))
-                                .bold()
-                            Text("12 July 2023")
-                                .font(.system(size: 30))
-                        }
+                        .font(.custom(AppFonts.helveticaNeue, size: 18))
+                        .frame(width: UIScreen.main.bounds.width * 0.382, height: UIScreen.main.bounds.height * 0.157)
+                        Spacer()
                     }
+                    
                 }
             }
+            Divider()
             HStack{
                 Spacer()
                 Text("Match Item")
-                    .font(.system(size: 50))
+                    .font(.custom(AppFonts.helveticaNeue, size: 30))
                     .bold()
                 Spacer()
                 Text("7 out of 15")
-                    .font(.system(size: 20))
+                    .font(.custom(AppFonts.helveticaNeue, size: 15))
+                    .bold()
+                    .padding(.trailing, 20)
             }
-            HStack{
-                ForEach(rankedImageSet.indices, id: \.self) { index in
-                    let (image, _) = rankedImageSet[index]
-                    VStack {
-                        Image(uiImage: image)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                        Text("Rank: \(index + 1)")
+            ScrollView(.vertical){
+                LazyVGrid(columns: gridItems) {
+                    ForEach(rankedImageSet.chunks(of: 3).indices, id: \.self) { index in
+                        HStack(spacing: 15) {
+                            let (image, _) = rankedImageSet[index]
+                            VStack {
+                                Image(uiImage: image)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 100, height: 100)
+                                Text("Rank: \(index + 1)")
+                            }
+                        }
+                        
                     }
                 }
+                
             }
             Spacer()
         }
+        .navigationBarTitle("")
+        .toolbar(content: {
+            ToolbarItem(id: "title", placement: .navigationBarLeading) {
+                Text("Lost #88")
+                    .foregroundColor(.white)
+                    .font(.custom(AppFonts.helveticaNeue, size: 50))
+                    .bold()
+                    .padding(.top, 17)
+                    .padding(.leading, 17)
+            }
+        })
+        .toolbarBackground(AppColor.blueNavigationBar, for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
+    }
+    var gridItems: [GridItem] {
+        Array(repeating: GridItem(.flexible(), spacing: 16), count: 3)
     }
 }
 

@@ -10,15 +10,14 @@ import SwiftUI
 struct ProcessButton: View {
     var body: some View {
         Text("PROCESS")
-            .frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.height*0.061)
-            .font(.system(size: 25))
-            .bold()
-            .border(Color.black)
-            .cornerRadius(20)
+            .frame(width: UIScreen.main.bounds.width*0.15, height: UIScreen.main.bounds.height*0.03)
+            .font(.custom(AppFonts.helveticaNeue, size: 14))
+            .fontWeight(.medium)
             .overlay(
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color.black, lineWidth: 2)
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.black, lineWidth: 1)
             )
+            .padding(.trailing, 60)
     }
 }
 

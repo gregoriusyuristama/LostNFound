@@ -13,7 +13,7 @@ struct ItemImage: View {
         Image(imageName)
             .resizable()
             .aspectRatio(contentMode: .fit)
-            .frame(width: UIScreen.main.bounds.width*0.3, height: UIScreen.main.bounds.height*0.4)
+            .frame(width: UIScreen.main.bounds.width*0.23, height: UIScreen.main.bounds.height*0.311)
             .overlay(
                 RoundedRectangle(cornerRadius: 30)
                     .stroke(Color.black, lineWidth: 1)
