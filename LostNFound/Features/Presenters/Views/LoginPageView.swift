@@ -9,6 +9,8 @@ import SwiftUI
 
 struct LoginPageView: View {
     
+    @State var password = ""
+    
     var body: some View {
         
         VStack{
@@ -25,7 +27,7 @@ struct LoginPageView: View {
                 .zIndex(2)
             
             //Password Field
-            PasswordField()
+            PasswordField(password: $password)
             
             
             //Forgot Password Buttom
@@ -40,8 +42,11 @@ struct LoginPageView: View {
             }
             
             //Login Button
-            Button{
-                
+            NavigationLink{
+                if password == "1234" {
+                    MainPageView()
+                        .navigationBarBackButtonHidden(true)
+                }
             }label: {
                 CapsuleButton(text: "Login")
             }

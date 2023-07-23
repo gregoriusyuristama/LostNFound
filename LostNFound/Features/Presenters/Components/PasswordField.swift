@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PasswordField: View {
     
-    @State var password: String = ""
+    @Binding var password: String
     
     var body: some View {
         ZStack {
@@ -43,6 +43,6 @@ struct PasswordField: View {
 
 struct PasswordField_Previews: PreviewProvider {
     static var previews: some View {
-        PasswordField()
+        PasswordField(password: .constant(""))
     }
 }

@@ -8,21 +8,35 @@
 import SwiftUI
 
 struct ItemImage: View {
-    @State var imageName = "DompetLost"
+    @State var imageURL: URL?
     var body: some View {
-        Image(imageName)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
+        Rectangle()
+            .fill(.clear)
             .frame(width: UIScreen.main.bounds.width*0.23, height: UIScreen.main.bounds.height*0.311)
-            .overlay(
-                RoundedRectangle(cornerRadius: 30)
-                    .stroke(Color.black, lineWidth: 1)
-            )
+            .overlay {
+                AsyncImage(url: imageURL) { image in
+                    image.resizable()
+                        .scaledToFit()
+                        .frame(width: UIScreen.main.bounds.width*0.23, height: UIScreen.main.bounds.height*0.311)
+                } placeholder: {
+                    ProgressView()
+                }
+            }
+        
+
+//        Image(imageName)
+//            .resizable()
+//            .aspectRatio(contentMode: .fit)
+//            .frame(width: UIScreen.main.bounds.width*0.23, height: UIScreen.main.bounds.height*0.311)
+//            .overlay(
+//                RoundedRectangle(cornerRadius: 30)
+//                    .stroke(Color.black, lineWidth: 1)
+//            )
     }
 }
 
-struct ItemImage_Previews: PreviewProvider {
-    static var previews: some View {
-        ItemImage().previewInterfaceOrientation(.landscapeLeft)
-    }
-}
+//struct ItemImage_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ItemImage(imageURL: .constant(URL(string: ""))).previewInterfaceOrientation(.landscapeLeft)
+//    }
+//}
