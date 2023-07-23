@@ -27,6 +27,8 @@ struct ReportLostPage: View {
     
     @StateObject private var vm = InputLostItemViewModel()
     
+    @State private var translatedColorName: String = ""
+    
     var body: some View {
         VStack {
             HStack(alignment: .top) {
@@ -56,6 +58,14 @@ struct ReportLostPage: View {
                 }
                 .sheet(isPresented: $showImagePicker){
                     ImagePicker(uiImage: $selectedImage, isPresenting: $showImagePicker, sourceType: $sourceType)
+                }.onChange(of: selectedImage) { newImage in
+                    if let image = newImage {
+                        itemName = ImageClassifier.getResult(selectedImage: image)
+                        let uicolor = image.preciseAverageColor()
+                        let itemColor = uicolor!.accessibilityName
+                        translatedColorName = translateColorToIndonesian(itemColor)
+                        itemName.append(" " + translatedColorName)
+                    }
                 }
                 VStack{
                     Group {
@@ -63,7 +73,7 @@ struct ReportLostPage: View {
                         TextField("Phone Number", text: $phoneNumber)
                             .keyboardType(.numberPad)
                         CustomDatePicker(selectedDate: $date)
-                        CustomDropdownMenu(selectedOption: $location, options: Constants.allStationNames, placeholder: "Location")
+                        CustomDropdownMenu(selectedOption: $location, options: Constants.allStationNames.keys.sorted(), placeholder: "Location")
                         CustomDropdownMenu(selectedOption: $category, options: Constants.allCategory, placeholder: "Category")
                         TextEditor(text: $desc)
                             .frame(height: geo.size.height * 0.15)
@@ -100,7 +110,7 @@ struct ReportLostPage: View {
             SubmitButton(doSubmit: {
                 if checkForm() {
                     isShowingSubmitSheet = true
-                    let newItem = ItemLnF(itemName: self.itemName, locationFound: self.location, currentLocation: self.location, dateFound: self.date, desc: self.desc, lastModified: Date(), personInCharge: "Icho", phoneNumber: self.phoneNumber)
+                    let newItem = ItemLost(itemName: self.itemName, category: self.category, locationFound: self.location, currentLocation: self.location, dateFound: self.date, desc: self.desc, lastModified: Date(), personInCharge: "Icho", phoneNumber: self.phoneNumber, idFoundItem: "")
                     reportNumber = newItem.id?.uuidString ?? "000"
                     vm.addItem(item: newItem, imageData: (self.selectedImage?.jpegData(compressionQuality: 0.5))!) { status, error in
                         if let error = error {
@@ -112,7 +122,7 @@ struct ReportLostPage: View {
                 }else {
                     isShowingErrorSheet = true
                 }
-
+                
             }
             )
             .sheet(isPresented: $isShowingSubmitSheet){

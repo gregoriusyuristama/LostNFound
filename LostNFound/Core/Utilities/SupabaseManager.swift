@@ -12,8 +12,6 @@ class SupabaseManager {
     private let config: AppConfig
     let client: SupabaseClient
     
-
-    
     lazy var storage = SupabaseStorageClient(url: "https://wdivfbdgewrynyhgxyep.supabase.co/storage/v1", headers: [
         "Authorization" : "Bearer \(config.secret)",
         "apiKey" : config.supabaseAPIKey
@@ -23,15 +21,5 @@ class SupabaseManager {
         guard let url = URL(string: config.supabaseEndpoint) else { fatalError() }
         self.config = config
         self.client = SupabaseClient(supabaseURL: url, supabaseKey: config.supabaseAPIKey)
-        Task{
-            do {
-                try await print(self.client.storage.listBuckets())
-            }
-            catch{
-                print(error)
-            }
-           
-            
-        }
     }
 }

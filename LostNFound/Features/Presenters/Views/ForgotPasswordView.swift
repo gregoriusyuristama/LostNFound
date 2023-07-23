@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ForgotPasswordView: View {
+    @State var password: String = ""
     var body: some View {
         
         VStack{
@@ -19,7 +20,7 @@ struct ForgotPasswordView: View {
                 .padding(EdgeInsets(top: 65, leading: 0, bottom: 170, trailing: 0))
             
             //Password Field
-            PasswordField()
+            PasswordField(password: $password)
             
             
             //Login Button

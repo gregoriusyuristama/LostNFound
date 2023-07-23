@@ -38,20 +38,20 @@ class Constants {
         DropdownOption(key: uniqueKey, value:  "Stasiun Setiabudi Astra"),
     ]
     
-    static let allStationNames: [String] = [
-        "Stasiun Lebak Bulus Grab",
-        "Stasiun Haji Nawi",
-        "Stasiun ASEAN",
-        "Stasiun Bendungan Hilir",
-        "Stasiun Bundaran HI",
-        "Stasiun Blok A",
-        "Stasiun Senayan",
-        "Stasiun Setiabudi Astra",
-        "Stasiun Cipete Raya",
-        "Stasiun Blok M BCA",
-        "Stasiun Istora Mandiri",
-        "Stasiun Dukuh Atas BNI",
-        "Stasiun Setiabudi Astra",
+    static let allStationNames: [String : String] = [
+        "Stasiun Lebak Bulus Grab" : "Lebak B.",
+        "Stasiun Haji Nawi" : "Haji N.",
+        "Stasiun ASEAN" : "ASEAN",
+        "Stasiun Bendungan Hilir" : "Benhil",
+        "Stasiun Bundaran HI" : "BHI",
+        "Stasiun Blok A" : "Blok A",
+        "Stasiun Senayan" : "Senayan",
+        "Stasiun Setiabudi Astra" : "Setiabudi",
+        "Stasiun Cipete Raya" : "Cipete",
+        "Stasiun Blok M BCA" : "Blok M",
+        "Stasiun Istora Mandiri" : "Istora",
+        "Stasiun Dukuh Atas BNI" : "Dukuh A.",
+        "Stasiun Fatmawati Indomaret" : "Fatma",
     ]
     
     static let allCategory: [String] = [
@@ -78,16 +78,15 @@ class StorageNames {
     init () {}
     
     static let foundItemImageStorage = "ItemFoundImage"
+    static let lostItemImageStorage = "ItemLostImage"
     static let foundItemImageURL = "https://wdivfbdgewrynyhgxyep.supabase.co/storage/v1/object/public/ItemFoundImage/"
+    static let lostItemImageURL = "https://wdivfbdgewrynyhgxyep.supabase.co/storage/v1/object/public/ItemLostImage/"
 }
 
 
 
 class ItemCategory {
     init() {}
-    
-    
-    
     static let category = [
         "Valueable": [
             "Cash",

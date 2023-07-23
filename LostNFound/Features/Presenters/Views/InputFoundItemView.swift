@@ -18,7 +18,6 @@ struct InputFoundItemView: View {
     @State private var selectedImage: UIImage?
     @State var sourceType: UIImagePickerController.SourceType = .camera
     
-    
     @StateObject private var vm = InputFoundItemViewModel()
     var body: some View {
         ZStack {
@@ -65,7 +64,7 @@ struct InputFoundItemView: View {
                     ImagePicker(uiImage: $selectedImage, isPresenting: $showImagePicker, sourceType: $sourceType)
                 }
                 Button {
-                    let newItem = ItemLnF(itemName: "", locationFound: self.locationFound, currentLocation: self.currentLocation, dateFound: self.dateFound, desc: self.itemDesc, lastModified: Date(), personInCharge: self.personInCharge, phoneNumber: "")
+                    let newItem = ItemFound(itemName: "", locationFound: self.locationFound, currentLocation: self.currentLocation, dateFound: self.dateFound, desc: self.itemDesc, lastModified: Date(), personInCharge: self.personInCharge, phoneNumber: "")
                     vm.addItem(item: newItem, imageData: (selectedImage?.jpegData(compressionQuality: 0.5))!) { status, error in
                         if let error = error {
                             print(error.localizedDescription)
@@ -82,6 +81,7 @@ struct InputFoundItemView: View {
             
             .opacity(vm.isLoading ? 0 : 1)
         }
+        
     }
     func resetForm() {
         self.locationFound = ""

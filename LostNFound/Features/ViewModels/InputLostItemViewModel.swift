@@ -9,7 +9,7 @@ import Foundation
 import SupabaseStorage
 
 class InputLostItemViewModel: ObservableObject {
-    @Published var allItems: [ItemLnF] = [ItemLnF]()
+    @Published var allItems: [ItemLost] = [ItemLost]()
     @Published var isLoading: Bool = false
     
     private let supabase = SupabaseManager()
@@ -22,14 +22,14 @@ class InputLostItemViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     self.isLoading = true
                 }
-                let allItemFoundsDTO: [ItemLnF.DTO] = try await supabase.client.database
+                let allItemLostDTO: [ItemLost.DTO] = try await supabase.client.database
                     .from(TableNames.lostItemTable)
                     .select()
                     .execute()
                     .value
-                let allItemFounds = try allItemFoundsDTO.map { try $0.toDomain() }
+                let allItemLost = try allItemLostDTO.map { try $0.toDomain() }
                 DispatchQueue.main.async {
-                    self.allItems = allItemFounds
+                    self.allItems = allItemLost
                     self.isLoading = false
                 }
             }
@@ -39,19 +39,18 @@ class InputLostItemViewModel: ObservableObject {
         }
     }
     
-    private func uploadImage(item: ItemLnF, imageData: Data){
+    private func uploadImage(item: ItemLost, imageData: Data){
         Task {
             do{
                 let file = File(name: item.id!.uuidString, data: imageData, fileName: "\(item.id!.uuidString).jpg", contentType: "image/jpeg")
-               let _ = try await supabase.storage.from(id: StorageNames.foundItemImageStorage).upload(path: "\(item.id!.uuidString).jpg", file: file, fileOptions: FileOptions(cacheControl: "3600"))
+                let _ = try await supabase.storage.from(id: StorageNames.lostItemImageStorage).upload(path: "\(item.id!.uuidString).jpg", file: file, fileOptions: FileOptions(cacheControl: "3600"))
             } catch {
                 print(error)
             }
-            
         }
     }
     
-    func addItem(item: ItemLnF, imageData: Data, completion: @escaping (_ status: Bool, _ error: Error?) -> Void) {
+    func addItem(item: ItemLost, imageData: Data, completion: @escaping (_ status: Bool, _ error: Error?) -> Void) {
         do {
             let itemDTO = try item.toDTO()
             Task {
