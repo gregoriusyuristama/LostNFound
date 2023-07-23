@@ -76,16 +76,14 @@ struct LostItemView: View {
             }
             ScrollView(.vertical){
                 LazyVGrid(columns: gridItems) {
-                    ForEach(rankedImageSet.chunks(of: 3).indices, id: \.self) { index in
-                        HStack(spacing: 15) {
-                            let (image, _) = rankedImageSet[index]
-                            VStack {
-                                Image(uiImage: image)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 100, height: 100)
-                                Text("Rank: \(index + 1)")
-                            }
+                    ForEach(rankedImageSet.indices, id: \.self) { index in
+                        let (image, _) = rankedImageSet[index]
+                        VStack {
+                            Image(uiImage: image)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 200, height: 200)
+                            Text("Rank: \(index + 1)")
                         }
                         
                     }
