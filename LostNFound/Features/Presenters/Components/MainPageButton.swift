@@ -22,8 +22,9 @@ struct MainPageButton: View {
                     RoundedRectangle(cornerRadius: 30)
                         .stroke(Color.gray, lineWidth: 1)
                 )
-
+            
             Image("\(buttonName)")
+                .padding()
         }
     }
 }

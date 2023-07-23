@@ -30,7 +30,7 @@ struct LostItemNonImageView: View {
         VStack{
             BlueTitle()
             HStack{
-                ItemImage(imageName: "NoImage").padding(70)
+//                ItemImage(imageName: "NoImage").padding(70)
                 VStack(alignment: .leading){
                     HStack{
                         VStack(alignment: .leading){

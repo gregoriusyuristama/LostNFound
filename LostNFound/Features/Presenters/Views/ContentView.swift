@@ -9,23 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-//        NavigationView {
-//            VStack {
-//                NavigationLink {
-//                    InputFoundItemView()
-//                } label: {
-//                    Text("Input Item")
-//                }
-//
-//                NavigationLink {
-//                    ShowFoundItemsView()
-//                } label: {
-//                    Text("Show All Items")
-//                }
-//            }
-//            .padding()
-//        }
-        MainPageView()
+        //        NavigationView {
+        //            VStack {
+        //                NavigationLink {
+        //                    InputFoundItemView()
+        //                } label: {
+        //                    Text("Input Item")
+        //                }
+        //
+        //                NavigationLink {
+        //                    ShowFoundItemsView()
+        //                } label: {
+        //                    Text("Show All Items")
+        //                }
+        //            }
+        //            .padding()
+        //        }
+        NavigationStack{
+            LoginPageView()
+        }
     }
 }
 

@@ -74,7 +74,7 @@ struct ReportFoundPage: View {
                         TextField("Phone Number", text: $phoneNumber)
                             .keyboardType(.numberPad)
                         CustomDatePicker(selectedDate: $date)
-                        CustomDropdownMenu(selectedOption: $location, options: Constants.allStationNames, placeholder: "Location")
+                        CustomDropdownMenu(selectedOption: $location, options: Constants.allStationNames.keys.sorted(), placeholder: "Location")
                         CustomDropdownMenu(selectedOption: $category, options: Constants.allCategory, placeholder: "Category")
                         TextEditor(text: $desc)
                             .frame(height: geo.size.height * 0.15)
