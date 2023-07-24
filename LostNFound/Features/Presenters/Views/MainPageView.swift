@@ -73,8 +73,6 @@ struct MainPageView: View {
                 
             }
             .padding(.trailing, 48)
-            
-            
         }
         
     }

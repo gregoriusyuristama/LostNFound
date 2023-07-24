@@ -113,7 +113,7 @@ struct ReportFoundPage: View {
                     isShowingSubmitSheet = true
                     let newItem = ItemFound(itemName: self.itemName, locationFound: self.location, currentLocation: self.location, dateFound: self.date, desc: self.desc, lastModified: Date(), personInCharge: "Icho", phoneNumber: self.phoneNumber)
                     reportNumber = newItem.id?.uuidString ?? "000"
-                    vm.addItem(item: newItem, imageData: (self.selectedImage?.jpegData(compressionQuality: 0.5))!) { status, error in
+                    vm.addItem(item: newItem, imageData: (self.selectedImage?.jpegData(compressionQuality: 0.1))!) { status, error in
                         if let error = error {
                             print(error.localizedDescription)
                         }else {
