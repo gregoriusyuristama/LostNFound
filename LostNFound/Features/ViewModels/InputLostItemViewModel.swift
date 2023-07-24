@@ -50,7 +50,7 @@ class InputLostItemViewModel: ObservableObject {
         }
     }
     
-    func addItem(item: ItemLost, imageData: Data, completion: @escaping (_ status: Bool, _ error: Error?) -> Void) {
+    func addItem(item: ItemLost, imageData: Data?, completion: @escaping (_ status: Bool, _ error: Error?) -> Void) {
         do {
             let itemDTO = try item.toDTO()
             Task {
@@ -63,7 +63,10 @@ class InputLostItemViewModel: ObservableObject {
                     .single()
                     .execute()
                     .value
-                uploadImage(item: item, imageData: imageData)
+                if let imgData = imageData {
+                    uploadImage(item: item, imageData: imgData)
+                    
+                }
                 DispatchQueue.main.async {
                     self.isLoading = false
                 }

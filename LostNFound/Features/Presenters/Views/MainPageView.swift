@@ -62,15 +62,17 @@ struct MainPageView: View {
             
             //Help Button
             HStack{
+                Spacer()
                 Button{
                 }label: {
                     Image(systemName: "questionmark.circle")
                         .resizable()
                         .frame(width:UIScreen.main.bounds.width*0.0374, height: UIScreen.main.bounds.height*0.0488)
                 }
-                .padding(EdgeInsets(top: 104, leading: 1268, bottom: 33, trailing: 48))
+//                .padding(EdgeInsets(top: 104, leading: 1268, bottom: 33, trailing: 48))
                 
             }
+            .padding(.trailing, 48)
             
             
         }

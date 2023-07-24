@@ -112,11 +112,23 @@ struct ReportLostPage: View {
                     isShowingSubmitSheet = true
                     let newItem = ItemLost(itemName: self.itemName, category: self.category, locationFound: self.location, currentLocation: self.location, dateFound: self.date, desc: self.desc, lastModified: Date(), personInCharge: "Icho", phoneNumber: self.phoneNumber, idFoundItem: "")
                     reportNumber = newItem.id?.uuidString ?? "000"
-                    vm.addItem(item: newItem, imageData: (self.selectedImage?.jpegData(compressionQuality: 0.5))!) { status, error in
-                        if let error = error {
-                            print(error.localizedDescription)
-                        }else {
-                            resetForm()
+                    if let imgData = selectedImage?.jpegData(compressionQuality: 0.5){
+                        vm.addItem(item: newItem, imageData: imgData) { status, error in
+                            if let error = error {
+                                print(error.localizedDescription)
+                                return
+                            } else {
+                                resetForm()
+                            }
+                        }
+                    } else {
+                        vm.addItem(item: newItem, imageData: nil) { status, error in
+                            if let error = error {
+                                print(error.localizedDescription)
+                                return
+                            } else {
+                                resetForm()
+                            }
                         }
                     }
                 }else {
