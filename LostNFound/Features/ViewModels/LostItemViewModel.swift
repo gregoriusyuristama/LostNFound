@@ -82,13 +82,6 @@ class LostItemViewModel: ObservableObject {
             let similarity = calculateMSE(targetImage, image) // You can also use calculateSSIM if needed
             return (image, similarity)
         }.sorted(by: { $0.1 < $1.1 })
-//        DispatchQueue.main.async {
-//
-////            self.isLoading = false
-//        }
-        
-//         = rankedImageSet
-//        self.isLoading = false
         
     }
     
